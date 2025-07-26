@@ -519,9 +519,12 @@ block.settings.image_1.aspect_ratio:{{ block.settings.image_1.aspect_ratio }}<br
 block.settings.image_1_sp.aspect_ratio:{{ block.settings.image_1_sp.aspect_ratio }}<br>
     
 <style>
+/* 画像コンテナ */
 .products-{{ block.id }} .content .image {
   position: relative;
 }
+
+/* 画像を絶対配置でフィット */
 .products-{{ block.id }} .content .image img {
   position: absolute;
   top: 0;
@@ -530,6 +533,8 @@ block.settings.image_1_sp.aspect_ratio:{{ block.settings.image_1_sp.aspect_ratio
   height: 100%;
   object-fit: cover;
 }
+
+/* SP用のアスペクト比指定 */
 .products-{{ block.id }} .content .image.image-1 {
   {% if block.settings.image_1_sp != blank %}
     padding-bottom: {{ 1 | divided_by: block.settings.image_1_sp.aspect_ratio | times: 100 }}%;
@@ -537,6 +542,8 @@ block.settings.image_1_sp.aspect_ratio:{{ block.settings.image_1_sp.aspect_ratio
     padding-bottom: {{ 1 | divided_by: block.settings.image_1.aspect_ratio | times: 100 }}%;
   {% endif %}
 }
+
+/* PC用のアスペクト比指定 */
 @media screen and (min-width: 750px) {
   .products-{{ block.id }} .content .image.image-1 {
     {% if block.settings.image_1 != blank %}
@@ -544,41 +551,45 @@ block.settings.image_1_sp.aspect_ratio:{{ block.settings.image_1_sp.aspect_ratio
     {% endif %}
   }
 }
+
+/* カルーセル全体のコンテナ */
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
+/* カルーセルのスライド列 */
 .carousel-area {
   display: flex;
   transition: transform 0.3s ease;
   will-change: transform;
-  padding: 0 10%; /* はみ出し部分分を親にpaddingで持たせる */
+  padding: 0 10%; /* スマホ: 両サイド1/10見切れ */
 }
 
-/* スライド幅を完全に100%で管理 */
+/* スライド1枚の幅を100%で管理 */
 .carousel-area .content {
   flex: 0 0 100%;
   box-sizing: border-box;
-  text-align: center;
+  text-align: left; /* 左寄せに修正 */
   user-select: none;
   padding: 0 10px;
 }
 
+/* カルーセル画像のリセット */
 .carousel-area .image img {
   width: 100%;
   display: block;
 }
 
-/* 両サイド見切れの調整 */
+/* PCの両サイド見切れ幅調整（2/3見切れ） */
 @media (min-width: 769px) {
   .carousel-area {
-    padding: 0 16.666%; /* 両サイド2/3見切れ = 中央の幅 = 100% - (2/3*2)=33.333% */
+    padding: 0 16.666%; /* 両サイド2/3見切れ */
   }
 }
-
 </style>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
