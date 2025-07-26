@@ -519,6 +519,14 @@ block.settings.image_1.aspect_ratio:{{ block.settings.image_1.aspect_ratio }}<br
 block.settings.image_1_sp.aspect_ratio:{{ block.settings.image_1_sp.aspect_ratio }}<br>
     
 <style>
+.products-{{ block.id }} .content .image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .products-{{ block.id }} .content .image.image-1 {
   {% if block.settings.image_1_sp != blank %}
     padding-bottom: {{ 1 | divided_by: block.settings.image_1_sp.aspect_ratio | times: 100 }}%;
