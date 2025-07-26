@@ -133,6 +133,7 @@
         "row_r7NmcE": {
           "type": "row",
           "settings": {
+            "image": "shopify://shop_images/brand_story_01.jpg",
             "caption": "キャプション",
             "heading": "行",
             "text": "<p>選択した商品、コレクション、ブログ記事に注目を集めるため、テキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。</p>",
