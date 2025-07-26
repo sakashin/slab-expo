@@ -455,77 +455,9 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="swiper-area">
-              <div class="swiper">
-                <div class="swiper-wrapper">
-                  <a href="#" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/800/500" alt=""></div>
-                      <div class="slide-content">
-                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
-                        <h2 class="slide-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                      </div>
-                    </article>
-                  </a>
-                  <a href="#" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/800/500" alt=""></div>
-                      <div class="slide-content">
-                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
-                        <h2 class="slide-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                      </div>
-                    </article>
-                  </a>
-                  <a href="#" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/800/500" alt=""></div>
-                      <div class="slide-content">
-                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
-                        <h2 class="slide-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                      </div>
-                    </article>
-                  </a>
-                  <a href="#" class="swiper-slide">
-                    <article class="slide">
-                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/127/800/500" alt=""></div>
-                      <div class="slide-content">
-                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
-                        <h2 class="slide-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                      </div>
-                    </article>
-                  </a>
-                </div><!-- /swiper-wrapper -->
-              </div><!-- /swiper -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div><!-- /swiper-area -->
-            <div class="swiper-pagination"></div>
+            
             
           </div>
-          <script>
-            const mySwiper = new Swiper('.products-{{ block.id }} .swiper', {
-              slidesPerView: 1,
-              spaceBetween: 24,
-              grabCursor: true,
-              pagination: {
-                el: '.products-{{ block.id }} .swiper-pagination',
-                clickable: true,
-              },
-              navigation: {
-                nextEl: '.products-{{ block.id }} .swiper-button-next',
-                prevEl: '.products-{{ block.id }} .swiper-button-prev',
-              },
-              breakpoints: {
-                600: {
-                  slidesPerView: 2,
-                },
-                1025: {
-                  slidesPerView: 4,
-                  spaceBetween: 32,
-                }
-              },
-            });
-          </script>
         
       {%- endcase -%}
     {%- endfor -%}
