@@ -629,8 +629,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateSlideWidth() {
     // contentのoffsetWidthを直接取得（padding分含めて正確に）
     slideWidth = slides[currentIndex].offsetWidth;
-}
-
+  }
 
   function setPosition() {
     updateSlideWidth();
@@ -652,7 +651,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateDots() {
     // currentIndex はクローンを含むため、実際のスライド番号を計算
     const totalSlides = slides.length - 2; // クローンを除いた本来のスライド数
-    const realIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    const realIndex = (currentIndex + totalSlides) % totalSlides;
   
     dots.forEach((dot, i) => {
       dot.classList.toggle("active", i === realIndex);
