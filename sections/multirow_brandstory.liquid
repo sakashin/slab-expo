@@ -518,7 +518,7 @@
 
     
 <style>
-.products-{{ block.id }} .content .image {
+.products-{{ block.id }} .content .image.image-1 {
   {% if block.settings.image_1_sp != blank %}
     padding-bottom: {{ 1 | divided_by: block.settings.image_1_sp.aspect_ratio | times: 100 }}%;
   {% else %}
@@ -526,7 +526,7 @@
   {% endif %}
 }
 @media screen and (min-width: 750px) {
-  .products-{{ block.id }} .content .image {
+  .products-{{ block.id }} .content .image.image-1 {
     {% if block.settings.image_1 != blank %}
       padding-bottom: {{ 1 | divided_by: block.settings.image_1.aspect_ratio | times: 100 }}%;
     {% endif %}
