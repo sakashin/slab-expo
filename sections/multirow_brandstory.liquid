@@ -219,6 +219,9 @@
               padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
               padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
             }
+            .section-{{ section.id }}-padding .image-with-text-{{ block.id }} .grid__item.image-with-text__text-item .image-with-text__content {
+              padding: 2rem 0;
+            }
             .section-{{ section.id }}-padding .image-with-text-{{ block.id }} .image-with-text__grid--reverse {
               padding-left: 3rem;
             }
