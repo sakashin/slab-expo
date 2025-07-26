@@ -116,7 +116,7 @@
           "settings": {
             "heading": "Brand Story",
             "heading_size_type": "num",
-            "heading_color": "#ffffff",
+            "heading_color": "rgba(255,255,255,1)",
             "heading_fontweight": 100,
             "heading_align": "center",
             "heading_size": "h1",
@@ -130,7 +130,7 @@
             "heading_padding_bottom": 0,
             "caption": "aaaaa",
             "caption_size_type": "preset",
-            "caption_color": "#000000",
+            "caption_color": "rgba(255,255,255,1)",
             "caption_fontweight": 100,
             "caption_align": "center",
             "caption_size_desktop": 24,
