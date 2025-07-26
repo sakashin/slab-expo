@@ -452,7 +452,7 @@
           >
             <div class="carousel-area">
               <div class="content">
-                  {%- if block.settings.image_1 != blank -%}
+                {%- if block.settings.image_1 != blank -%}
                   <div class="image image-1">
                     {%- capture sizes -%}
                       (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
@@ -468,7 +468,7 @@
                       <picture>
                         <source 
                           media="(max-width: 740px)"
-                          srcset="{{ block.settings.image_1sp | image_url }}"
+                          srcset="{{ block.settings.image_1_sp | image_url }}"
                           loading="lazy">
                           {{
                             block.settings.image_1
@@ -484,29 +484,77 @@
                   {%- endif -%}
                   {%- if block.settings.text_1 != blank -%}
                   <div class="text">{{ block.settings.text_1 }}</div>
+                {%- endif -%}
+              </div>
+              <div class="content">
+                {%- if block.settings.image_2 != blank -%}
+                  <div class="image image-1">
+                    {%- capture sizes -%}
+                      (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                      (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                    {%- endcapture -%}
+                    {%- if block.settings.image_2_sp == blank -%}
+                      {{
+                        block.settings.image_2
+                        | image_url: width: 1500
+                        | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                      }}
+                    {%- else -%}
+                      <picture>
+                        <source 
+                          media="(max-width: 740px)"
+                          srcset="{{ block.settings.image_2_sp | image_url }}"
+                          loading="lazy">
+                          {{
+                            block.settings.image_2
+                            | image_url: width: 1500
+                            | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                          }}
+                      </picture>
+                    {%- endif -%}
+                  </div>
                   {%- endif -%}
+                  {%- if block.settings.heading_1 != blank -%}
+                  <h3 class="heading">{{ block.settings.heading_1 }}</h3>
+                  {%- endif -%}
+                  {%- if block.settings.text_1 != blank -%}
+                  <div class="text">{{ block.settings.text_1 }}</div>
+                {%- endif -%}
               </div>
               <div class="content">
-                  <div class="image image-2">
-                      <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
+                {%- if block.settings.image_3 != blank -%}
+                  <div class="image image-1">
+                    {%- capture sizes -%}
+                      (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                      (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                    {%- endcapture -%}
+                    {%- if block.settings.image_3_sp == blank -%}
+                      {{
+                        block.settings.image_3
+                        | image_url: width: 1500
+                        | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                      }}
+                    {%- else -%}
+                      <picture>
+                        <source 
+                          media="(max-width: 740px)"
+                          srcset="{{ block.settings.image_3_sp | image_url }}"
+                          loading="lazy">
+                          {{
+                            block.settings.image_3
+                            | image_url: width: 1500
+                            | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
+                          }}
+                      </picture>
+                    {%- endif -%}
                   </div>
-                  <h3 class="heading">蓮/REN</h3>
-                  <div class="text">
-                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-                  </div>  
-              </div>
-              <div class="content">
-                  <div class="image image-3">
-                      <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
-                  </div>
-                  <h3 class="heading">蓮/REN</h3>
-                  <div class="text">
-                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-                  </div>  
+                  {%- endif -%}
+                  {%- if block.settings.heading_1 != blank -%}
+                  <h3 class="heading">{{ block.settings.heading_1 }}</h3>
+                  {%- endif -%}
+                  {%- if block.settings.text_1 != blank -%}
+                  <div class="text">{{ block.settings.text_1 }}</div>
+                {%- endif -%}
               </div>
             </div>
             <div class="carousel-pagination">
