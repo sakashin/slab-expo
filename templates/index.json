@@ -262,6 +262,8 @@
         "products_gmmMVB": {
           "type": "products",
           "settings": {
+            "padding_top": 0,
+            "padding_bottom": 0,
             "heading_color": "rgba(255,255,255,1)",
             "heading_border_color": "rgba(255,255,255,0.8)",
             "heading_fontweight": 100,
@@ -273,7 +275,7 @@
             "heading_letterspacing_mobile": 0.2,
             "heading_padding_top": 0,
             "heading_padding_bottom": 0,
-            "text_color": "rgba(255,255,255,1)",
+            "text_color": "rgba(255,255,255,0.8)",
             "text_fontweight": 100,
             "text_size_desktop": 18,
             "text_lineheight_desktop": 1.6,
@@ -285,9 +287,12 @@
             "text_padding_bottom": 52,
             "image_1": "shopify://shop_images/brand_story_01.jpg",
             "image_1_sp": "shopify://shop_images/brand_story_01_sp.jpg",
-            "heading_1": "行",
-            "padding_top": 0,
-            "padding_bottom": 0
+            "heading_1": "Material",
+            "text_1": "<p>美しい色彩を放つ、らせん状の藻類スピルリナ×植物由来のプラスティックを融合したいのち巡る素材</p>\n<p>海の微細藻類であり美しい色彩を放つ、らせん状のスピルリナと植物由来のバイオエンジニアリングプラスチック「DURABIO™（デュラビオ™）」を混合溶融した「いのち巡る素材」を採用。\nまるで自然が育んだかのような深みのある色彩が、四季の移り変わりのように光の角度や歳月とともに変化し、日本的な美意識である移ろいゆく美を感じることができます。</p>\n<p>by　放電精密加工研究所<br>\n※バイオエンジニアリングプラスチック「DURABIO™（デュラビオ™）」は三菱ケミカル社の登録商標です。</p>",
+            "heading_2": "",
+            "text_2": "",
+            "heading_3": "",
+            "text_4": ""
           }
         }
       },
