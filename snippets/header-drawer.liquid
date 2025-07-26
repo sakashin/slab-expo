@@ -5,6 +5,13 @@
   {% render 'header-drawer' %}
 {% endcomment %}
 
+{%- liquid
+    assign section_settings_menu = section.settings.menu
+    if drawer_menu_handle != blank
+      assign section_settings_menu = linklists[drawer_menu_handle]
+    endif
+-%}
+
 <header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
   <details id="Details-menu-drawer-container" class="menu-drawer-container">
     <summary
