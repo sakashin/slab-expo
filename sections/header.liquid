@@ -185,11 +185,13 @@
       .header__menus {
         display: flex;
       }
-      nav.header__inline-menu {
+      .header__menus .header__inline-menu {
         display: flex;
         align-items: center; /* 子要素を上下中央に */
       }
-
+      .header__menus .localization-form:only-child {
+        margin: 0;
+      }
 
     </style>
     <div class="header__menus">
