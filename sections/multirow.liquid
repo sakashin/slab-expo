@@ -11,6 +11,9 @@
     {% unless section.settings.background_image_sp == blank %}
       background-image: url('{{ section.settings.background_image_sp | image_url: width: 781 }}');
       background-size: 781px 498px;
+    {% else %}
+      background-image: url('{{ section.settings.background_image | image_url: width: 1024 }}');
+      background-size: 1024px 374px;
     {% endunless %}
   }
 
