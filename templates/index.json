@@ -129,7 +129,7 @@
             "heading_padding_top": 0,
             "heading_padding_bottom": 0,
             "caption": "aaaaa",
-            "caption_size_type": "preset",
+            "caption_size_type": "num",
             "caption_color": "rgba(255,255,255,1)",
             "caption_fontweight": 100,
             "caption_align": "center",
