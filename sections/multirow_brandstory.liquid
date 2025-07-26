@@ -636,10 +636,12 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSlideWidth();
     carousel.style.transition = "none";
     carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+    updateDots(); // ここを追加
   }
-
-  // 初期位置セット
+  
+  // 初期セット
   setTimeout(setPosition, 50);
+
 
   function moveToSlide(index) {
     carousel.style.transition = "transform 0.3s ease";
@@ -648,9 +650,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateDots() {
-    const realIndex = (currentIndex - 1 + (slides.length - 2)) % (slides.length - 2);
-    dots.forEach((dot, i) => dot.classList.toggle("active", i === realIndex));
+    // currentIndex はクローンを含むため、実際のスライド番号を計算
+    const totalSlides = slides.length - 2; // クローンを除いた本来のスライド数
+    const realIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === realIndex);
+    });
   }
+
 
   function handleTransitionEnd() {
     if (slides[currentIndex] === slides[0]) {
