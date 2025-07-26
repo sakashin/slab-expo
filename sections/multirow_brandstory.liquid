@@ -551,14 +551,14 @@
 }
 
 /* カルーセル全体のコンテナ */
-.carousel-wrapper {
+.products-{{ block.id }} .carousel-wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
 /* カルーセルのスライド列 */
-.carousel-area {
+.products-{{ block.id }} .carousel-area {
   display: flex;
   transition: transform 0.3s ease;
   will-change: transform;
@@ -566,7 +566,7 @@
 }
 
 /* スライド1枚の幅を100%で管理 */
-.carousel-area .content {
+.products-{{ block.id }} .carousel-area .content {
   flex: 0 0 100%;
   box-sizing: border-box;
   text-align: left; /* 左寄せに修正 */
@@ -575,18 +575,18 @@
 }
 
 /* カルーセル画像のリセット */
-.carousel-area .image img {
+.products-{{ block.id }} .carousel-area .image img {
   width: 100%;
   display: block;
 }
 
 /* PCの両サイド見切れ幅調整（2/3見切れ） */
 @media (min-width: 769px) {
-  .carousel-area {
+  .products-{{ block.id }} .carousel-area {
     padding: 0 30%; /* 両サイド1/3見切れ */
   }
 }
-.carousel-pagination {
+.products-{{ block.id }} .carousel-pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -594,7 +594,7 @@
   margin-top: 10px;
 }
 
-.carousel-pagination span {
+.products-{{ block.id }} .carousel-pagination span {
   display: inline-block;
   width: 60px; /* 棒の長さ */
   height: 6px;  /* 棒の太さ */
@@ -603,7 +603,7 @@
   transition: background 0.3s ease;
 }
 
-.carousel-pagination span.active {
+.products-{{ block.id }} .carousel-pagination span.active {
   background: rgba(255, 255, 255, 1); /* アクティブは白 */
 }
 
