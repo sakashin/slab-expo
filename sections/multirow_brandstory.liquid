@@ -219,11 +219,13 @@
               padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
               padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
             }
+            .section-{{ section.id }}-padding .image-with-text-{{ block.id }} .grid__item.image-with-text__text-item .image-with-text__content {
+              padding-right: 0;
+              padding-left: {{ block.settings.image_and_text_gap }}rem;
+            }
             .section-{{ section.id }}-padding .image-with-text-{{ block.id }} .image-with-text__grid--reverse .grid__item.image-with-text__text-item .image-with-text__content {
               padding-right: {{ block.settings.image_and_text_gap }}rem;
-            }
-            .section-{{ section.id }}-padding .image-with-text-{{ block.id }} .grid__item.image-with-text__text-item .image-with-text__content {
-              padding-left: {{ block.settings.image_and_text_gap }}rem;
+              padding-left: 0;
             }
             @media screen and (min-width: 750px) {
               .image-with-text-{{ block.id }} {
