@@ -29,6 +29,9 @@
         background-size: 1365px 498px;
       {% endunless %}
     }
+    .grid--3-col-tablet .grid__item {
+      width: calc(43.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
+    }
   }
 {%- endstyle -%}
 
