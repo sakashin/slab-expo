@@ -6,14 +6,14 @@
   picture {
     display: block;
     width: 100%;
-    overflow: hidden; /* はみ出し防止 */
+    overflow: hidden;
   }
   
   picture img {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: cover; /* はみ出す分をトリミング */
+    object-fit: cover;
   }
 </style>
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
@@ -22,7 +22,11 @@
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
       #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+        {% unless block.settings.image_sp == blank %}
+        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image_sp.aspect_ratio | times: 100 }}%;
+        {% else %}
         padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
+        {% endunless %}
         content: '';
         display: block;
       }
