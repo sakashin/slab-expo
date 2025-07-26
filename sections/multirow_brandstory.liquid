@@ -650,11 +650,11 @@
 }
 
 .products-{{ block.id }} .carousel-pagination span {
-  display: inline-block;
-  width: 60px; /* 棒の長さ */
-  height: 5px;  /* 棒の太さ */
+  flex: 1; /* 均等割り */
+  height: 6px;
   background: rgba(255, 255, 255, 0.4);
   transition: background 0.3s ease;
+  margin: 0 2px; /* 棒同士の隙間 */
 }
 
 .products-{{ block.id }} .carousel-pagination span.active {
