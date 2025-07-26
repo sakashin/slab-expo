@@ -59,7 +59,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %} ヘッダー表示調整 {% endcomment %}\n<style>\n.header__icons {\n  display: none;\n}\n@media screen and (min-width: 990px) {\n  header.header {\n    grid-template-columns: 1fr 4fr;\n  }\n  nav.header__inline-menu {\n    text-align: right;\n  }\n  nav.header__inline-menu li {\n    \n  }\n  nav.header__inline-menu li:not(last-child) {\n    border-right: .5px solid #7B612E;\n  }\n  nav.header__inline-menu .header__menu-item {\n    color: #7B612E;\n    font-weight: 100;\n    font-size: 13px;\n    letter-spacing: .4rem;\n    padding: 0 2.5rem;\n  }\n}\n</style>",
+        "custom_liquid": "{% comment %} ヘッダー表示調整 {% endcomment %}\n<style>\n.header__icons {\n  display: none;\n}\n@media screen and (min-width: 990px) {\n  header.header {\n    grid-template-columns: 1fr 4fr;\n    max-width: 100%;\n  }\n  nav.header__inline-menu {\n    text-align: right;\n  }\n  nav.header__inline-menu li {\n    \n  }\n  nav.header__inline-menu li:not(last-child) {\n    border-right: .5px solid #7B612E;\n  }\n  nav.header__inline-menu .header__menu-item {\n    color: #7B612E;\n    font-weight: 100;\n    font-size: 13px;\n    letter-spacing: .4rem;\n    padding: 0 2.5rem;\n  }\n}\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
