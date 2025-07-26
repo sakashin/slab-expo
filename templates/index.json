@@ -371,6 +371,7 @@
         "show_vendor": false,
         "show_rating": false,
         "show_type": true,
+        "show_net_price": true,
         "show_summary": true,
         "quick_add": "none",
         "columns_mobile": "1",
