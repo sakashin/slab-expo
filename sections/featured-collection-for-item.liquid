@@ -80,7 +80,6 @@
             font-weight: {{ section.settings.heading_fontweight }};
             line-height: {{ section.settings.heading_lineheight_mobile }};
             letter-spacing: {{ section.settings.heading_letterspacing_mobile }}rem;
-            font-size: {{ section.settings.heading_size_mobile }}px;
             border-bottom: 1px solid {{ section.settings.heading_border_color }};
             width: 100%;
           }
@@ -90,7 +89,6 @@
               padding-bottom: {{ section.settings.heading_padding_bottom }}px;
               line-height: {{ section.settings.heading_lineheight_desktop }};
               letter-spacing: {{ section.settings.heading_letterspacing_desktop }}rem;
-              font-size: {{ section.settings.heading_size_desktop }}px;
             }
           }
           {%- if block.settings.heading_size_type == 'num' -%}
