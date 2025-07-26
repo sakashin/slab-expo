@@ -246,6 +246,14 @@
         font-family: var(--font-body-family);
         font-style: var(--font-body-style);
         font-weight: var(--font-body-weight);
+        {% unless settings.background_image == blank %}
+          background-image: url('{{ settings.background_image | image_url: width: 1375 }}');
+          background-repeat: repeat;
+          background-position: 0 0;
+          background-size: 687px 915px;
+          background-position: center;
+          background-attachment: scroll !important;
+        {% endunless %}
       }
 
       @media screen and (min-width: 750px) {
