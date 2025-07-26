@@ -586,6 +586,27 @@
     padding: 0 33.333%; /* 両サイド1/3見切れ */
   }
 }
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* 各バーの間隔 */
+  margin-top: 10px;
+}
+
+.carousel-pagination span {
+  display: inline-block;
+  width: 60px; /* 棒の長さ */
+  height: 6px;  /* 棒の太さ */
+  background: rgba(255, 255, 255, 0.4); /* 非アクティブは薄い色 */
+  border-radius: 3px; /* 丸み */
+  transition: background 0.3s ease;
+}
+
+.carousel-pagination span.active {
+  background: rgba(255, 255, 255, 1); /* アクティブは白 */
+}
+
 </style>
 
 
