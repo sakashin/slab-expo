@@ -370,6 +370,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "show_summary": true,
         "quick_add": "none",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
