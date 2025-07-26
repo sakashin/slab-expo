@@ -47,6 +47,49 @@
         "accessibility_info": "ブランドについてのスライドショー"
       }
     },
+    "rich_text_QL4RJF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_mVRqHK": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>あえて“止まる”時間。<br/>今を味わうことで未来に想いを馳せ、<br/>自分を感じることで、ひとを想う。</p><p>2025年日本国際博覧会（大阪・関西万博）<br/>日本館から生まれた未来をみる椅子</p><p>蓮/REN</p>",
+            "heading_size": "h2"
+          }
+        },
+        "text_ULfyLB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>ブランドに関する情報をお客様と共有します。商品を説明したり、告知をしたり、ストアへのお客様を歓迎したりします。</p>"
+          }
+        },
+        "button_BHRma7": {
+          "type": "button",
+          "settings": {
+            "button_label": "ボタンのラベル",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mVRqHK",
+        "text_ULfyLB",
+        "button_BHRma7"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -249,6 +292,7 @@
   },
   "order": [
     "slideshow_czRRk6",
+    "rich_text_QL4RJF",
     "image_banner",
     "featured_collection",
     "featured_collection_gA6T3g",
