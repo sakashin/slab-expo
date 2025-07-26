@@ -441,6 +441,16 @@
               }
             }
           </style>
+        {%- when 'products' -%}
+          <div 
+            class="products-{{ block.id }} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+          </div>
       {%- endcase -%}
     {%- endfor -%}
   </div>
