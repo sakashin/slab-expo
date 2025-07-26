@@ -22,7 +22,7 @@
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
       #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        {% unless block.settings.image_sp == blank %}
+        {% unless section.blocks.first.settings.image_sp == blank %}
         padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image_sp.aspect_ratio | times: 100 }}%;
         {% else %}
         padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
