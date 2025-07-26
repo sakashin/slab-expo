@@ -86,7 +86,10 @@
         },
         "image_cTXwME": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/image01.jpg",
+            "image_sp": "shopify://shop_images/image01_sp.jpg"
+          }
         }
       },
       "block_order": [
