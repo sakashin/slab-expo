@@ -1451,5 +1451,15 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "背景画像",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "背景画像"
+      }
+    ]
   }
 ]
