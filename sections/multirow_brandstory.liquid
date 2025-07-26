@@ -569,6 +569,25 @@
   }
 }
 
+.products-{{ block.id }} .text {
+  padding-top: {{ block.settings.text_padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ block.settings.text_padding_bottom | times: 0.75 | round: 0 }}px;
+  color: {{ block.settings.text_color }};
+  font-weight: {{ block.settings.text_fontweight }};
+  font-size: {{ block.settings.text_size_mobile }}px;
+  line-height: {{ block.settings.text_lineheight_mobile }};
+  letter-spacing: {{ block.settings.text_letterspacing_mobile }}rem;
+}
+@media screen and (min-width: 750px) {
+  .products-{{ block.id }} .text {
+    padding-top: {{ block.settings.text_padding_top }}px;
+    padding-bottom: {{ block.settings.text_padding_bottom }}px;
+    font-size: {{ block.settings.text_size_desktop }}px;
+    line-height: {{ block.settings.text_lineheight_desktop }};
+    letter-spacing: {{ block.settings.text_letterspacing_desktop }}rem;
+  }
+}
+
 /* カルーセル全体のコンテナ */
 .products-{{ block.id }} .carousel-wrapper {
   position: relative;
