@@ -59,7 +59,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "{% comment %} ヘッダー表示調整 {% endcomment %}\n<style>\n.header__icons {\n  display: none;\n}\n</style>",
+        "custom_liquid": "{% comment %} ヘッダー表示調整 {% endcomment %}\n<style>\n.header__icons {\n  display: none;\n}\nheader {\n  justify-content: space-between;\n}\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
