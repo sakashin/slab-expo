@@ -16,7 +16,6 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/main-image.jpg",
-            "image_sp": "shopify://shop_images/main-image_sp.jpg",
             "image_overlay_opacity": 0,
             "heading": "画像スライド",
             "heading_size": "h1",
