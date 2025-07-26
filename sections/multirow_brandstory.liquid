@@ -775,6 +775,26 @@ document.addEventListener("DOMContentLoaded", () => {
   carousel.addEventListener("mouseleave", endDrag);
 
   updateDots();
+
+  function setPaginationWidth() {
+    const slideWidth = slides[currentIndex].getBoundingClientRect().width;
+    dots.forEach(dot => {
+      dot.style.width = `${slideWidth}px`;
+    });
+  }
+  
+  // 初期セット
+  setTimeout(() => {
+    setPosition();
+    setPaginationWidth(); // バー幅を設定
+  }, 50);
+  
+  // リサイズ時も更新
+  window.addEventListener("resize", () => {
+    setPosition();
+    setPaginationWidth();
+  });
+
 });
 </script>
 
