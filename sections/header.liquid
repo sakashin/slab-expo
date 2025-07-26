@@ -136,15 +136,15 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer_menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
       if section.settings.menu != blank
-        if  section.settings.drawer-menu != blank
-          assign drawer-menu-handle = section.settings.drawer-menu
+        if  section.settings.drawer_menu != blank
+          assign drawer_menu_handle = section.settings.drawer_menu
         else
-          assign drawer-menu-handle = nil
+          assign drawer_menu_handle = nil
         endif
-        render 'header-drawer', drawer-menu-handle: drawer-menu-handle
+        render 'header-drawer', drawer_menu_handle: drawer_menu_handle
       endif
 
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
@@ -526,7 +526,7 @@
     },
     {
       "type": "text",
-      "id": "drawer-menu",
+      "id": "drawer_menu",
       "label": "ドロワーメニュー",
       "info": "ドロワーメニューを指定するとそちらを優先的に表示します。（メニューのハンドル名を指定してください）"
     },
