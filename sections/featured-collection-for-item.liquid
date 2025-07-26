@@ -93,6 +93,16 @@
               font-size: {{ section.settings.heading_size_desktop }}px;
             }
           }
+          {%- if block.settings.heading_size_type == 'num' -%}
+            #collection-{{ section.id }} .collection__title .title {
+              font-size: {{ section.settings.heading_size_mobile }}px;
+            }
+            @media screen and (min-width: 750px) {
+              #collection-{{ section.id }} .collection__title .title {
+                font-size: {{ section.settings.heading_size_desktop }}px;
+              }
+            }
+          {%- endif -%}
         </style>
       {%- endif -%}
       {%- if section.settings.description != blank
