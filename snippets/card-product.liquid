@@ -213,7 +213,7 @@
 
             {%- if show_net_price and card_product.metafields.custom.net_price !=  blank -%}
               <div class="net_price">
-              {{ card_product.metafields.custom.net_price.value | money }}
+              {{ card_product.metafields.custom.net_price.value | money_without_currency }}円（税抜）
               </div>
             {%- endif -%}
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
