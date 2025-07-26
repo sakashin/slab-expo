@@ -1661,6 +1661,26 @@ document.addEventListener("DOMContentLoaded", () => {
       "limit": 1,
       "settings": [ 
         {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 100,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 0
+        },
+        {
           "type": "header",
           "content": "見出し"
         },
@@ -1881,34 +1901,52 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           "type": "html",
           "id": "heading_1",
-          "default": "t:sections.multirow.blocks.row.settings.heading.default",
-          "label": "t:sections.multirow.blocks.row.settings.heading.label"
+          "label": "見出し１"
         },
         {
           "type": "html",
           "id": "text_1",
-          "default": "t:sections.multirow.blocks.row.settings.text.default",
-          "label": "t:sections.multirow.blocks.row.settings.text.label"
+          "label": "テキスト１"
         },
         {
-          "type": "range",
-          "id": "padding_top",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "t:sections.all.padding.padding_top",
-          "default": 0
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "画像２"
         },
         {
-          "type": "range",
-          "id": "padding_bottom",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "t:sections.all.padding.padding_bottom",
-          "default": 0
+          "type": "image_picker",
+          "id": "image_2_sp",
+          "label": "画像２（スマートフォン用）"
+        },
+        {
+          "type": "html",
+          "id": "heading_2",
+          "label": "見出し２"
+        },
+        {
+          "type": "html",
+          "id": "text_2",
+          "label": "テキスト２"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "画像３"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3_sp",
+          "label": "画像３（スマートフォン用）"
+        },
+        {
+          "type": "html",
+          "id": "heading_3",
+          "label": "見出し３"
+        },
+        {
+          "type": "html",
+          "id": "text_4",
+          "label": "テキスト４"
         },
       ]
     }
