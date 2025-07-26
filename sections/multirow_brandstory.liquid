@@ -783,15 +783,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function setPaginationWidth() {
     const slideWidth = slides[currentIndex].getBoundingClientRect().width;
-    dots.forEach(dot => {
-      dot.style.width = `${slideWidth}px`;
-    });
+    const pagination = document.querySelector(".carousel-pagination");
+    pagination.style.width = `${slideWidth}px`; // ページネーション全体の横幅をスライド幅に
   }
   
-  
-  
-  
-
 });
 </script>
 
