@@ -263,7 +263,7 @@
           "type": "products",
           "settings": {
             "heading_color": "rgba(255,255,255,1)",
-            "heading_border_color": "rgba(0,0,0,0.3)",
+            "heading_border_color": "rgba(255,255,255,0.8)",
             "heading_fontweight": 100,
             "heading_size_desktop": 16,
             "heading_lineheight_desktop": 1.6,
