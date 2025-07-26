@@ -351,8 +351,8 @@
           <style>
             @media screen and (max-width: 749px) {
               .image-{{ block.id }}.rich-text__image {
-                padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
-                padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+                margin-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
+                margin-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
                 position: relative;
               }
           
@@ -378,8 +378,8 @@
           
             @media screen and (min-width: 750px) {
               .image-{{ block.id }}.rich-text__image {
-                padding-top: {{ block.settings.padding_top }}px;
-                padding-bottom: {{ block.settings.padding_bottom }}px;
+                margin-top: {{ block.settings.padding_top }}px;
+                margin-bottom: {{ block.settings.padding_bottom }}px;
                 position: relative;
               }
           
