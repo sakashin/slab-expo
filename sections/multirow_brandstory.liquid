@@ -296,7 +296,7 @@
             }
           </style>
         {%- when 'image' -%}
-          <div class="page-width">
+         
             <div 
               class="image-{{ block.id }} rich-text__image{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               {{ block.shopify_attributes }}
@@ -349,7 +349,7 @@
               {%- endif -%}
             {%- endif -%}
             </div>
-          </div>
+         
           <style>
             @media screen and (max-width: 749px) {
               .image-{{ block.id }}.rich-text__image {
