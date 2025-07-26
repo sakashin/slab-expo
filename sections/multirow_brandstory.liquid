@@ -572,19 +572,21 @@ document.addEventListener("DOMContentLoaded", () => {
   carousel.appendChild(firstClone);
 
   slides = Array.from(carousel.children);
-  let currentIndex = 1;
-  let slideWidth = slides[currentIndex].getBoundingClientRect().width;
-
-  carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
-
-  // フリック用
-  let startX = 0;
-  let currentX = 0;
-  let isDragging = false;
+  let currentIndex = 1; // 真ん中スタート（最初のクローン分1から）
+  let slideWidth;
 
   function updateSlideWidth() {
     slideWidth = slides[currentIndex].getBoundingClientRect().width;
   }
+
+  function setPosition() {
+    updateSlideWidth();
+    carousel.style.transition = "none";
+    carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+  }
+
+  // 初期位置セット
+  setTimeout(setPosition, 50);
 
   function moveToSlide(index) {
     carousel.style.transition = "transform 0.3s ease";
@@ -600,16 +602,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function handleTransitionEnd() {
     if (slides[currentIndex] === slides[0]) {
       currentIndex = slides.length - 2;
-      carousel.style.transition = "none";
-      carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+      setPosition();
     }
     if (slides[currentIndex] === slides[slides.length - 1]) {
       currentIndex = 1;
-      carousel.style.transition = "none";
-      carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+      setPosition();
     }
     updateDots();
   }
+
+  // フリック用
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
 
   function startDrag(e) {
     isDragging = true;
@@ -645,10 +650,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // イベント登録
   carousel.addEventListener("transitionend", handleTransitionEnd);
-  window.addEventListener("resize", () => {
-    updateSlideWidth();
-    moveToSlide(currentIndex);
-  });
+  window.addEventListener("resize", setPosition);
 
   carousel.addEventListener("touchstart", startDrag);
   carousel.addEventListener("touchmove", onDrag);
@@ -661,6 +663,8 @@ document.addEventListener("DOMContentLoaded", () => {
   updateDots();
 });
 </script>
+
+
 
 
 
