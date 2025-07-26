@@ -31,6 +31,7 @@
               >
                 {{ block.settings.heading }}
               </h2>
+              {%- if block.settings.heading_size_type == 'num' -%}
               <style>
                 .h2-{{ block.id }} {
                   font-size: {{ block.settings.font_size_mobile }}px;
@@ -41,6 +42,7 @@
                   }
                 }
               </style>
+              {%- endif -%}
             {%- when 'caption' -%}
               <p
                 class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -204,6 +206,22 @@
         },
         {
           "type": "select",
+          "id": "heading_size_type",
+          "options": [
+            {
+              "value": "preset",
+              "label": "プリセット"
+            },
+            {
+              "value": "num",
+              "label": "数値"
+            },
+          ],
+          "default": "preset",
+          "label": "フォントサイズ指定方法"
+        },
+        {
+          "type": "select",
           "id": "heading_size",
           "options": [
             {
@@ -228,7 +246,8 @@
             }
           ],
           "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "label": "t:sections.all.heading_size.label",
+          "visible_if": "{{ block.settings.heading_size_type == 'preset' }}"
         },
         {
           "type": "range",
@@ -238,7 +257,8 @@
           "step": 1,
           "unit": "px",
           "label": "フォントサイズ（デスクトップ）",
-          "default": 24
+          "default": 24,
+          "visible_if": "{{ block.settings.heading_size_type == 'num' }}"
         },
         {
           "type": "range",
@@ -248,7 +268,8 @@
           "step": 1,
           "unit": "px",
           "label": "フォントサイズ（モバイル）",
-          "default": 20
+          "default": 20,
+          "visible_if": "{{ block.settings.heading_size_type == 'num' }}"
         }
       ]
     },
