@@ -296,60 +296,58 @@
             }
           </style>
         {%- when 'image' -%}
-         
-            <div 
-              class="image-{{ block.id }} rich-text__image{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-              {{ block.shopify_attributes }}
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
-              {% endif %}
-            >
-            {%- if block.settings.image -%}
-              {%- liquid
-                assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
-                if section.settings.image_behavior == 'ambient'
-                  assign sizes = '120vw'
-                  assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
-                else
-                  assign sizes = '100vw'
-                  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-                endif
-                assign fetch_priority = 'auto'
-                if section.index == 1
-                  assign fetch_priority = 'high'
-                endif
-              -%}
-              {%- if block.settings.image_sp == blank -%}
-                {{
-                  block.settings.image
-                  | image_url: width: 3840
-                  | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-                }}
-              {%- else -%}
-                <picture>
-                  <source 
-                    media="(max-width: 740px)"
-                    srcset="{{ block.settings.image_sp | image_url }}"
-                    loading="lazy">
-                  {%- if forloop.first %}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3840
-                      | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
-                    }}
-                  {%- else -%}
-                    {{
-                      block.settings.image
-                      | image_url: width: 3840
-                      | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-                    }}
-                  {%- endif -%}
-                </picture>
-              {%- endif -%}
+          <div 
+            class="image-{{ block.id }} rich-text__image{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+          {%- if block.settings.image -%}
+            {%- liquid
+              assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+              if section.settings.image_behavior == 'ambient'
+                assign sizes = '120vw'
+                assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+              else
+                assign sizes = '100vw'
+                assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              endif
+              assign fetch_priority = 'auto'
+              if section.index == 1
+                assign fetch_priority = 'high'
+              endif
+            -%}
+            {%- if block.settings.image_sp == blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 3840
+                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+              }}
+            {%- else -%}
+              <picture>
+                <source 
+                  media="(max-width: 740px)"
+                  srcset="{{ block.settings.image_sp | image_url }}"
+                  loading="lazy">
+                {%- if forloop.first %}
+                  {{
+                    block.settings.image
+                    | image_url: width: 3840
+                    | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                  }}
+                {%- else -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 3840
+                    | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+                  }}
+                {%- endif -%}
+              </picture>
             {%- endif -%}
-            </div>
-         
+          {%- endif -%}
+          </div>
           <style>
             @media screen and (max-width: 749px) {
               .image-{{ block.id }}.rich-text__image {
