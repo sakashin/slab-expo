@@ -381,7 +381,8 @@
                 margin-top: {{ block.settings.padding_top }}px;
                 margin-bottom: {{ block.settings.padding_bottom }}px;
                 position: relative;
-                max-width: 1200px;
+                width: calc(100% - 40px);
+                margin: 0 auto;
               }
           
               .image-{{ block.id }}.rich-text__image::before {
