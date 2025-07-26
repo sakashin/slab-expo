@@ -142,19 +142,11 @@
                           media="(max-width: 740px)"
                           srcset="{{ block.settings.image_sp | image_url }}"
                           loading="lazy">
-                        {%- if forloop.first %}
                           {{
                             block.settings.image
-                            | image_url: width: 3840
-                            | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                            | image_url: width: 1500
+                            | image_tag: sizes: sizes, widths: '165, 360, 535, 750, 1070, 1500'
                           }}
-                        {%- else -%}
-                          {{
-                            block.settings.image
-                            | image_url: width: 3840
-                            | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
-                          }}
-                        {%- endif -%}
                       </picture>
                     {%- endif -%}
                   {%- else -%}
