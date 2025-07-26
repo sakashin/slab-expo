@@ -645,18 +645,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px; /* 各バーの間隔 */
   margin-top: 10px;
-  gap: 4px; /* 棒の間隔 */
 }
 
-.carousel-pagination span {
-  height: 6px; /* 棒の高さ */
-  background: rgba(255, 255, 255, 0.4);
+.products-{{ block.id }} .carousel-pagination span {
+  display: inline-block;
+  width: 60px; /* 棒の長さ */
+  height: 6px;  /* 棒の太さ */
+  background: rgba(255, 255, 255, 0.4); /* 非アクティブは薄い色 */
+  border-radius: 3px; /* 丸み */
   transition: background 0.3s ease;
 }
 
-.carousel-pagination span.active {
-  background: rgba(255, 255, 255, 1);
+.products-{{ block.id }} .carousel-pagination span.active {
+  background: rgba(255, 255, 255, 1); /* アクティブは白 */
 }
 
 </style>
