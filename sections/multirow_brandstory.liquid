@@ -464,6 +464,29 @@
             </div>
             <div class="swiper-scrollbar"></div>
           </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              new Swiper('.products-{{ block.id }}', {
+                slidesPerView: 1,         // 1枚ずつ表示
+                spaceBetween: 10,         // スライド間の余白(px)
+                loop: true,                // ループ
+                scrollbar: {
+                  el: '.swiper-scrollbar', // スクロールバー要素
+                  draggable: true,         // ドラッグで動かせる
+                },
+                autoplay: {
+                  delay: 3000,             // 自動再生の間隔(ms)
+                  disableOnInteraction: false,
+                },
+                breakpoints: {
+                  768: {
+                    slidesPerView: 3,      // 768px以上は3枚表示
+                    spaceBetween: 20,
+                  }
+                }
+              });
+            });
+          </script>
         
       {%- endcase -%}
     {%- endfor -%}
