@@ -782,9 +782,14 @@ document.addEventListener("DOMContentLoaded", () => {
   updateDots();
 
   function setPaginationWidth() {
-    const slideWidth = slides[currentIndex].getBoundingClientRect().width;
-    const pagination = document.querySelector(".carousel-pagination");
-    pagination.style.width = `${slideWidth}px`; // ページネーション全体の横幅をスライド幅に
+    const slideElement = slides[currentIndex];
+    const rectWidth = slideElement.getBoundingClientRect().width;
+    const style = window.getComputedStyle(slideElement);
+    const paddingLeft = parseFloat(style.paddingLeft);
+    const paddingRight = parseFloat(style.paddingRight);
+    
+    const paginationWidth = rectWidth - paddingLeft - paddingRight;
+    document.querySelector(".carousel-pagination").style.width = `${paginationWidth}px`;
   }
   
 });
