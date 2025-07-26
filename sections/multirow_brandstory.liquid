@@ -514,15 +514,16 @@
   display: flex;
   transition: transform 0.3s ease;
   will-change: transform;
+  padding: 0 10%; /* はみ出し部分分を親にpaddingで持たせる */
 }
 
-/* PC: 両サイドが2/3見切れる */
+/* スライド幅を完全に100%で管理 */
 .carousel-area .content {
-  flex: 0 0 calc(100% - 33.333%);
-  margin: 0 10px;
+  flex: 0 0 100%;
   box-sizing: border-box;
   text-align: center;
   user-select: none;
+  padding: 0 10px;
 }
 
 .carousel-area .image img {
@@ -530,31 +531,11 @@
   display: block;
 }
 
-@media (max-width: 768px) {
-  /* SP: 両サイドが1/10見切れる */
-  .carousel-area .content {
-    flex: 0 0 calc(100% - 10%);
+/* 両サイド見切れの調整 */
+@media (min-width: 769px) {
+  .carousel-area {
+    padding: 0 16.666%; /* 両サイド2/3見切れ = 中央の幅 = 100% - (2/3*2)=33.333% */
   }
-}
-
-/* ドット */
-.carousel-pagination {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.carousel-pagination span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  margin: 0 5px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.carousel-pagination span.active {
-  background: #333;
 }
 
 </style>
@@ -576,8 +557,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let slideWidth;
 
   function updateSlideWidth() {
-    slideWidth = slides[currentIndex].getBoundingClientRect().width;
-  }
+    // contentのoffsetWidthを直接取得（padding分含めて正確に）
+    slideWidth = slides[currentIndex].offsetWidth;
+}
+
 
   function setPosition() {
     updateSlideWidth();
@@ -663,6 +646,8 @@ document.addEventListener("DOMContentLoaded", () => {
   updateDots();
 });
 </script>
+
+
 
 
 
