@@ -181,7 +181,12 @@
     {%- endif -%}
 
     {%- if section.settings.logo_position == 'middle-left' -%}
-    <div>
+    <style>
+      .header__menus {
+        display: flex;
+      }
+    </style>
+    <div class="header__menus">
     {%- endif -%}
     {%- liquid
       if section.settings.menu != blank
