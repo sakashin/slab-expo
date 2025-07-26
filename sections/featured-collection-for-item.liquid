@@ -170,6 +170,7 @@
                   skip_styles: skip_card_product_styles,
                   section_id: section.id,
                   quick_add: section.settings.quick_add,
+                  show_type: section.settings.show_type,
                   show_summary: section.settings.show_summary,
                   enable_link: false
                 %}
@@ -739,6 +740,12 @@
       "default": false,
       "label": "t:sections.featured-collection.settings.show_rating.label",
       "info": "t:sections.featured-collection.settings.show_rating.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_type",
+      "default": false,
+      "label": "商品のタイプを表示する"
     },
     {
       "type": "checkbox",
