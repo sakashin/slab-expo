@@ -4,6 +4,19 @@
 
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
+    picture {
+      display: block;
+      width: 100%;
+      overflow: hidden; /* はみ出し防止 */
+    }
+    
+    picture img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* はみ出す分をトリミング */
+    }
+    
     @media screen and (max-width: 749px) {
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
@@ -24,20 +37,6 @@
     }
   {%- endstyle -%}
 {%- endif -%}
-<style>
-  picture {
-    display: block;
-    width: 100%;
-    overflow: hidden; /* はみ出し防止 */
-  }
-  
-  picture img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* はみ出す分をトリミング */
-  }
-</style>
 
 <slideshow-component
   class="slider-mobile-gutter{% if section.settings.layout == 'grid' %} page-width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
