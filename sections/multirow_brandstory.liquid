@@ -140,7 +140,7 @@
                       {{ block.settings.caption | escape }}
                     </p>
                   {%- endif -%}
-                  {%- if block.settings.heading -%}
+                  {%- if block.settings.heading != blank -%}
                     <h2 class="heading-{{ block.id }} image-with-text__heading {{ section.settings.heading_size }} rte">
                       {{ block.settings.heading }}
                     </h2>
