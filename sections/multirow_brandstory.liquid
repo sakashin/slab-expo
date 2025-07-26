@@ -557,17 +557,19 @@
   width: 100%;
 }
 
+/* カルーセルのスライド列 */
 .carousel-area {
   display: flex;
   transition: transform 0.3s ease;
   will-change: transform;
+  padding: 0 10%; /* スマホ: 両サイド1/10見切れ */
 }
 
-/* 各スライド幅の管理 */
+/* スライド1枚の幅を100%で管理 */
 .carousel-area .content {
   flex: 0 0 100%;
   box-sizing: border-box;
-  text-align: left;
+  text-align: left; /* 左寄せに修正 */
   user-select: none;
   padding: 0 10px;
 }
@@ -578,9 +580,10 @@
   display: block;
 }
 
+/* PCの両サイド見切れ幅調整（2/3見切れ） */
 @media (min-width: 769px) {
-  .carousel-area .content {
-    flex: 0 0 calc(100% - 66.666%); /* 中央の表示幅は33.333% */
+  .carousel-area {
+    padding: 0 33.333%; /* 両サイド1/3見切れ */
   }
 }
 .carousel-pagination {
@@ -624,30 +627,27 @@ document.addEventListener("DOMContentLoaded", () => {
   let slideWidth;
 
   function updateSlideWidth() {
-  slideWidth = slides[currentIndex].getBoundingClientRect().width;
+    // contentのoffsetWidthを直接取得（padding分含めて正確に）
+    slideWidth = slides[currentIndex].offsetWidth;
 }
 
-function setPosition() {
-  updateSlideWidth();
 
-  // 見切れ分のマージンを考慮して中央に合わせる
-  const wrapperWidth = document.querySelector(".carousel-wrapper").offsetWidth;
-  const offset = (wrapperWidth - slideWidth) / 2;
+  function setPosition() {
+    updateSlideWidth();
+    carousel.style.transition = "none";
+    carousel.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+    updateDots(); // ここを追加
+  }
+  
+  // 初期セット
+  setTimeout(setPosition, 50);
 
-  carousel.style.transition = "none";
-  carousel.style.transform = `translateX(${-slideWidth * currentIndex + offset}px)`;
-  updateDots();
-}
 
-function moveToSlide(index) {
-  const wrapperWidth = document.querySelector(".carousel-wrapper").offsetWidth;
-  const offset = (wrapperWidth - slideWidth) / 2;
-
-  carousel.style.transition = "transform 0.3s ease";
-  carousel.style.transform = `translateX(${-slideWidth * index + offset}px)`;
-  updateDots();
-}
-
+  function moveToSlide(index) {
+    carousel.style.transition = "transform 0.3s ease";
+    carousel.style.transform = `translateX(${-slideWidth * index}px)`;
+    updateDots();
+  }
 
   function updateDots() {
     // currentIndex はクローンを含むため、実際のスライド番号を計算
