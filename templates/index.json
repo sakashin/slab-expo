@@ -121,7 +121,7 @@
             "heading_align": "center",
             "heading_size": "h1",
             "heading_size_desktop": 40,
-            "heading_lineheight_desktop": 1.6,
+            "heading_lineheight_desktop": 1,
             "heading_letterspacing_desktop": 0.2,
             "heading_size_mobile": 20,
             "heading_lineheight_mobile": 1.3,
@@ -134,7 +134,7 @@
             "caption_fontweight": 100,
             "caption_align": "center",
             "caption_size_desktop": 24,
-            "caption_lineheight_desktop": 1.6,
+            "caption_lineheight_desktop": 1,
             "caption_letterspacing_desktop": 0.2,
             "caption_size_mobile": 20,
             "caption_lineheight_mobile": 1.3,
@@ -175,7 +175,7 @@
             "text_padding_bottom": 0,
             "button_label": "",
             "button_link": "",
-            "padding_top": 0,
+            "padding_top": 40,
             "padding_bottom": 0
           }
         },
