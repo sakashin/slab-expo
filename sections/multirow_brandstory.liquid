@@ -443,66 +443,56 @@
           </style>
         {%- when 'products' -%}
           <div 
-            class="products-{{ block.id }} swiper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="products-{{ block.id }} carousel-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            
-            
+            <div class="carousel-area">
+              <div class="content">
+                  <div class="image">
+                      <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
+                  </div>
+                  <h3 class="heading">蓮/REN</h3>
+                  <div class="text">
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                  </div>  
+              </div>
+              <div class="content">
+                  <div class="image">
+                      <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
+                  </div>
+                  <h3 class="heading">蓮/REN</h3>
+                  <div class="text">
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                  </div>  
+              </div>
+              <div class="content">
+                  <div class="image">
+                      <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
+                  </div>
+                  <h3 class="heading">蓮/REN</h3>
+                  <div class="text">
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                      <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+                  </div>  
+              </div>
+            </div>
+          </div>
+          <div class="carousel-pagination">
+              <span class="active"></span>
+              <span></span>
+              <span></span>
           </div>
 
     
-
-
-
-
-
-<div class="carousel-wrapper">
-  <div class="carousel-area">
-    <div class="content">
-        <div class="image">
-            <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
-        </div>
-        <h3 class="heading">蓮/REN</h3>
-        <div class="text">
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-        </div>  
-    </div>
-    <div class="content">
-        <div class="image">
-            <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
-        </div>
-        <h3 class="heading">蓮/REN</h3>
-        <div class="text">
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-        </div>  
-    </div>
-    <div class="content">
-        <div class="image">
-            <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
-        </div>
-        <h3 class="heading">蓮/REN</h3>
-        <div class="text">
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
-        </div>  
-    </div>
-  </div>
-</div>
-<div class="carousel-pagination">
-    <span class="active"></span>
-    <span></span>
-    <span></span>
-</div>
-
 <style>
 .carousel-wrapper {
   position: relative;
