@@ -211,6 +211,11 @@
               </p>
             {%- endif -%}
 
+            {%- if show_net_price and card_product.metafields.custom.net_price !=  blank -%}
+              <div class="net_price">
+              {{ card_product.metafields.custom.net_price }}
+              </div>
+            {%- endif -%}
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants_count == 1 and quick_add == 'bulk' %}
@@ -292,11 +297,6 @@
                 </div>
                 </quantity-popover>
               {% endif %}
-            {%- endif -%}
-            {%- if show_net_price and card_product.metafields.custom.net_price !=  blank -%}
-              <div class="net_price">
-              {{ card_product.metafields.custom.net_price }}
-              </div>
             {%- endif -%}
             {%- if show_summary and card_product.metafields.custom.summery !=  blank -%}
               <div class="summery">
