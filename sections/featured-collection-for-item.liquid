@@ -75,6 +75,7 @@
           #collection-{{ section.id }} .collection__title .title {
             padding-top: {{ section.settings.heading_padding_top | times: 0.75 | round: 0 }}px;
             padding-bottom: {{ section.settings.heading_padding_bottom | times: 0.75 | round: 0 }}px;
+            text-align: {{ section.settings.heading_align }};
             color: {{ section.settings.heading_color }};
             font-weight: {{ section.settings.heading_fontweight }};
             line-height: {{ section.settings.heading_lineheight_mobile }};
