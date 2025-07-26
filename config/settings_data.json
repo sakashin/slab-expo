@@ -9,9 +9,9 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/250725_ren_logo_rgb-02.png",
+    "logo": "shopify://shop_images/logo.png",
     "logo_width": 140,
-    "favicon": "shopify://shop_images/lab_ee2ec503-56ea-4c66-8316-a2b7feab01bf.png",
+    "favicon": "shopify://shop_images/favicon.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
