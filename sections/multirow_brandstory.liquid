@@ -295,6 +295,106 @@
               }
             }
           </style>
+        {%- when 'image' -%}
+          <div 
+            class="image-{{ block.id }} rich-text__image{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+          {%- if block.settings.image -%}
+            {%- liquid
+              assign height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round
+              if section.settings.image_behavior == 'ambient'
+                assign sizes = '120vw'
+                assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+              else
+                assign sizes = '100vw'
+                assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              endif
+              assign fetch_priority = 'auto'
+              if section.index == 1
+                assign fetch_priority = 'high'
+              endif
+            -%}
+            {%- if block.settings.image_sp == blank -%}
+              {{
+                block.settings.image
+                | image_url: width: 3840
+                | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+              }}
+            {%- else -%}
+              <picture>
+                <source 
+                  media="(max-width: 740px)"
+                  srcset="{{ block.settings.image_sp | image_url }}"
+                  loading="lazy">
+                {%- if forloop.first %}
+                  {{
+                    block.settings.image
+                    | image_url: width: 3840
+                    | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+                  }}
+                {%- else -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 3840
+                    | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+                  }}
+                {%- endif -%}
+              </picture>
+            {%- endif -%}
+          {%- endif -%}
+          </div>
+          <style>
+            @media screen and (max-width: 749px) {
+              .image-{{ block.id }}.rich-text__image {
+                position: relative;
+              }
+          
+              .image-{{ block.id }}.rich-text__image::before {
+                {% unless block.settings.image_sp == blank %}
+                  padding-bottom: {{ 1 | divided_by: block.settings.image_sp.aspect_ratio | times: 100 }}%;
+                {% else %}
+                  padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;
+                {% endunless %}
+                content: '';
+                display: block;
+              }
+          
+              .image-{{ block.id }}.rich-text__image picture,
+              .image-{{ block.id }}.rich-text__image img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          
+            @media screen and (min-width: 750px) {
+              .image-{{ block.id }}.rich-text__image {
+                position: relative;
+              }
+          
+              .image-{{ block.id }}.rich-text__image::before {
+                padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;
+                content: '';
+                display: block;
+              }
+          
+              .image-{{ block.id }}.rich-text__image picture,
+              .image-{{ block.id }}.rich-text__image img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          </style>
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -1000,6 +1100,27 @@
           "unit": "px",
           "label": "t:sections.all.padding.padding_bottom",
           "default": 0
+        },
+      ]
+    },
+    {
+      "type": "image",
+      "name": "画像",
+      "limit": 1,
+      "settings": [
+        {
+         "type": "header",
+         "content": "画像"
+        },  
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_sp",
+          "label": "t:sections.slideshow.blocks.slide.settings.image_sp.label"
         },
       ]
     }
