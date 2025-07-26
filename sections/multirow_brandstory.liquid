@@ -643,10 +643,12 @@
 }
 .products-{{ block.id }} .carousel-pagination {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px; /* 各バーの間隔 */
-  margin-top: 10px;
+  width: 100%;        /* コンテンツ幅いっぱい */
+  max-width: 100%;    /* 念のため */
+  margin: 10px auto 0;
+  gap: 0;             /* 棒同士の余白を消す */
 }
 
 .products-{{ block.id }} .carousel-pagination span {
