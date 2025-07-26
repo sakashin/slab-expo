@@ -431,16 +431,25 @@ table:not([class]) th {
   .small-hide {
     display: none !important;
   }
+  .br-sp {
+    display: block !important;
+  }
 }
 
 @media screen and (min-width: 750px) and (max-width: 989px) {
   .medium-hide {
     display: none !important;
   }
+  .br-sp {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 990px) {
   .large-up-hide {
+    display: none !important;
+  }
+  .br-sp {
     display: none !important;
   }
 }
