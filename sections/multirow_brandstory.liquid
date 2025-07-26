@@ -456,6 +456,8 @@
 
     
 
+
+
 <div class="carousel-area">
     <div class="content">
         <div class="image">
@@ -502,13 +504,15 @@
   overflow: hidden;
   width: 100%;
   position: relative;
+  touch-action: pan-y; /* スクロールと競合しないように */
 }
 
 .carousel-area .content {
-  min-width: 100%; /* 1スライドを100%幅に */
+  min-width: 100%;
   box-sizing: border-box;
   text-align: center;
-  transition: transform 0.4s ease;
+  user-select: none; /* ドラッグ時にテキストが選択されないように */
+  transition: transform 0.3s ease;
 }
 
 .carousel-area .image img {
@@ -546,12 +550,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
   const totalSlides = slides.length;
 
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
   function updateCarousel(index) {
     carousel.style.transform = `translateX(-${index * 100}%)`;
     dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
   }
 
-  // ドットをクリックしたら移動
+  // ドットをクリックで移動
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
       currentIndex = index;
@@ -559,15 +567,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 自動スライド（3秒ごと）
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % totalSlides;
+  // タッチ開始/ドラッグ開始
+  function startDrag(e) {
+    isDragging = true;
+    startX = e.type.includes("mouse") ? e.pageX : e.touches[0].pageX;
+    carousel.style.transition = "none";
+  }
+
+  // ドラッグ中
+  function onDrag(e) {
+    if (!isDragging) return;
+    currentX = e.type.includes("mouse") ? e.pageX : e.touches[0].pageX;
+    const delta = currentX - startX;
+    carousel.style.transform = `translateX(${delta - currentIndex * window.innerWidth}px)`;
+  }
+
+  // ドラッグ終了
+  function endDrag() {
+    if (!isDragging) return;
+    isDragging = false;
+    const delta = currentX - startX;
+
+    if (delta > 50 && currentIndex > 0) {
+      currentIndex--;
+    } else if (delta < -50 && currentIndex < totalSlides - 1) {
+      currentIndex++;
+    }
+
+    carousel.style.transition = "transform 0.3s ease";
     updateCarousel(currentIndex);
-  }, 3000);
+  }
+
+  // イベント登録（スマホ/PC両対応）
+  carousel.addEventListener("touchstart", startDrag);
+  carousel.addEventListener("touchmove", onDrag);
+  carousel.addEventListener("touchend", endDrag);
+
+  carousel.addEventListener("mousedown", startDrag);
+  carousel.addEventListener("mousemove", onDrag);
+  carousel.addEventListener("mouseup", endDrag);
+  carousel.addEventListener("mouseleave", endDrag);
 
   updateCarousel(currentIndex); // 初期表示
 });
 </script>
+
+
 
         
       {%- endcase -%}
