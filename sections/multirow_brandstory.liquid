@@ -455,26 +455,52 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <!-- Slider main container -->
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                ...
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-             
-              <!-- If we need navigation buttons -->
+            <div class="swiper-area">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <a href="#" class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/800/500" alt=""></div>
+                      <div class="slide-content">
+                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+                        <h2 class="slide-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                      </div>
+                    </article>
+                  </a>
+                  <a href="#" class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/800/500" alt=""></div>
+                      <div class="slide-content">
+                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+                        <h2 class="slide-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                      </div>
+                    </article>
+                  </a>
+                  <a href="#" class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/139/800/500" alt=""></div>
+                      <div class="slide-content">
+                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+                        <h2 class="slide-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                      </div>
+                    </article>
+                  </a>
+                  <a href="#" class="swiper-slide">
+                    <article class="slide">
+                      <div class="slide-media img-cover"><img src="https://picsum.photos/id/127/800/500" alt=""></div>
+                      <div class="slide-content">
+                        <time class="slide-date" datetime="2021-12-01">2021.12.01</time>
+                        <h2 class="slide-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                      </div>
+                    </article>
+                  </a>
+                </div><!-- /swiper-wrapper -->
+              </div><!-- /swiper -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
-             
-              <!-- If we need scrollbar -->
-              <div class="swiper-scrollbar"></div>
-            </div>
+            </div><!-- /swiper-area -->
+            <div class="swiper-pagination"></div>
+            
           </div>
           <script>
             const mySwiper = new Swiper('.swiper', {
