@@ -84,22 +84,15 @@
             "padding_bottom": 0
           }
         },
-        "button_BHRma7": {
-          "type": "button",
-          "settings": {
-            "button_label": "ボタンのラベル",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
+        "image_cTXwME": {
+          "type": "image",
+          "settings": {}
         }
       },
       "block_order": [
         "heading_mVRqHK",
         "text_ULfyLB",
-        "button_BHRma7"
+        "image_cTXwME"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
