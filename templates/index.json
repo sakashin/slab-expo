@@ -104,7 +104,8 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "background_image": "shopify://shop_images/bg_pc_01.jpg"
       }
     },
     "multirow_brandstory_JRdMXP": {
