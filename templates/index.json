@@ -54,9 +54,11 @@
           "type": "heading",
           "settings": {
             "heading": "<p>あえて“止まる”時間。<br/>今を味わうことで未来に想いを馳せ、<br/>自分を感じることで、ひとを想う。</p><p>2025年日本国際博覧会（大阪・関西万博）<br/>日本館から生まれた未来をみる椅子</p><p>蓮/REN</p>",
+            "heading_size_type": "num",
+            "heading_color": "#7e612e",
             "heading_size": "h2",
-            "font_size_desktop": 22,
-            "font_size_mobile": 17
+            "heading_size_desktop": 24,
+            "heading_size_mobile": 16
           }
         },
         "text_ULfyLB": {
