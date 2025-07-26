@@ -59,7 +59,7 @@
             "heading_fontweight": 100,
             "heading_size": "h2",
             "heading_size_desktop": 24,
-            "heading_lineheight_desktop": 1.6,
+            "heading_lineheight_desktop": 2,
             "heading_size_mobile": 16,
             "heading_lineheight_mobile": 1.3
           }
