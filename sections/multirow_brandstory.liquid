@@ -152,7 +152,7 @@
                 </div>
                 <style>
                   .image-with-text-{{ block.id }} .image-with-text__media {
-                    {% if section.settings.image_height == 'adapt' and block.settings.image_sp != blank %}
+                    {% if section.settings.image_height == 'adapt' %}
                       {% if block.settings.image_sp != blank %}
                         padding-bottom: {{ 1 | divided_by: block.settings.image_sp.aspect_ratio | times: 100 }}%;
                       {% else %}
