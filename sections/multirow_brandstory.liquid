@@ -235,6 +235,9 @@
                 padding-top: {{ block.settings.padding_top }}px;
                 padding-bottom: {{ block.settings.padding_bottom }}px;
               }
+              .section-{{ section.id }}-padding .image-with-text-{{ block.id }} .image-with-text__grid--reverse {
+                padding-left: 0;
+              }
             }
           </style>
       {%- endcase -%}
