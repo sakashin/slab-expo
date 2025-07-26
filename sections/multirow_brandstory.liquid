@@ -93,6 +93,7 @@
               font-weight: {{ block.settings.heading_fontweight }};
               line-height: {{ block.settings.heading_lineheight_mobile }};
               letter-spacing: {{ block.settings.heading_letterspacing_mobile }}rem;
+              font-size: {{ block.settings.heading_size_mobile }}px;
             }
             @media screen and (min-width: 750px) {
               .h2-{{ block.id }} {
@@ -100,18 +101,9 @@
                 padding-bottom: {{ block.settings.padding_bottom }}px;
                 line-height: {{ block.settings.heading_lineheight_desktop }};
                 letter-spacing: {{ block.settings.heading_letterspacing_desktop }}rem;
-              }
-            }
-          {%- if block.settings.heading_size_type == 'num' -%}
-            .h2-{{ block.id }} {
-              font-size: {{ block.settings.heading_size_mobile }}px;
-            }
-            @media screen and (min-width: 750px) {
-              .h2-{{ block.id }} {
                 font-size: {{ block.settings.heading_size_desktop }}px;
               }
             }
-          {%- endif -%}
           </style>
         {%- when 'row' -%}
           <div
