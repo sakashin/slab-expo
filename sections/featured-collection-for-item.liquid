@@ -113,6 +113,28 @@
             {{ section.settings.description -}}
           {%- endif %}
         </div>
+        <style>
+          #collection-{{ section.id }} .collection__description {
+            padding-top: {{ section.settings.text_padding_top | times: 0.75 | round: 0 }}px;
+            padding-bottom: {{ section.settings.text_padding_bottom | times: 0.75 | round: 0 }}px;
+            text-align: {{ section.settings.text_align }};
+            color: {{ section.settings.text_color }};
+            font-weight: {{ section.settings.text_fontweight }};
+            line-height: {{ section.settings.text_lineheight_mobile }};
+            letter-spacing: {{ section.settings.text_letterspacing_mobile }}rem;
+            font-size: {{ section.settings.text_size_mobile }}px;
+            width: 100%;
+          }
+          @media screen and (min-width: 750px) {
+            #collection-{{ section.id }} .collection__description {
+              padding-top: {{ section.settings.text_padding_top }}px;
+              padding-bottom: {{ section.settings.text_padding_bottom }}px;
+              line-height: {{ section.settings.text_lineheight_desktop }};
+              letter-spacing: {{ section.settings.text_letterspacing_desktop }}rem;
+              font-size: {{ section.settings.text_size_desktop }}px;
+            }
+          }
+        </style>
       {%- endif -%}
     </div>
 
