@@ -9,8 +9,8 @@
     background-position: center;
     background-attachment: scroll !important;
     {% unless section.settings.background_image_sp == blank %}
-      background-image: url('{{ section.settings.background_image_sp | image_url: width: 1562 }}');
-      background-size: 1562px 996px;
+      background-image: url('{{ section.settings.background_image_sp | image_url: width: 781 }}');
+      background-size: 781px 498px;
     {% endunless %}
   }
 
@@ -19,8 +19,8 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
       {% unless section.settings.background_image == blank %}
-        background-image: url('{{ section.settings.background_image | image_url: width: 2048 }}');
-        background-size: 2048px 748px;
+        background-image: url('{{ section.settings.background_image | image_url: width: 1024 }}');
+        background-size: 1024px 374px;
       {% endunless %}
     }
   }

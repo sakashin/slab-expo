@@ -108,16 +108,6 @@
         "background_image": "shopify://shop_images/bg_01.png"
       }
     },
-    "custom_liquid_ECe9J7": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "<section class=\"brand-block\">\n  <div class=\"container\">\n    <div class=\"brand-story\">\n      <div class=\"text\">\n        <h2>Brand Story</h2>\n        <p class=\"lead\">〜いのちの巡りを感じ、未来へと想いをつなぐ〜</p>\n        <p>人は日々の暮らしの中で...（中略）...</p>\n      </div>\n      <div class=\"image\">\n        <img src=\"{{ 'image01.jpg' | asset_url }}\" alt=\"Brand Story\">\n      </div>\n    </div>\n\n    <div class=\"brand-roots\">\n      <div class=\"image\">\n        <img src=\"{{ 'image02.jpg' | asset_url }}\" alt=\"Roots\">\n      </div>\n      <div class=\"text\">\n        <h2>Roots</h2>\n        <p>「いつもと、いつもの、あいだに」をテーマに...（中略）...</p>\n      </div>\n    </div>\n  </div>\n</section>\n<style>\n.brand-block {\n  width: 100%;\n  background: #bfae8e; /* 背景色は仮 */\n  padding: 50px 0;\n}\n\n.brand-block .container {\n  max-width: 1400px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n.brand-story,\n.brand-roots {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 5%;\n  margin-bottom: 80px;\n}\n\n.brand-story .text,\n.brand-roots .text {\n  flex: 1;\n}\n\n.brand-story .image,\n.brand-roots .image {\n  flex: 1;\n}\n\n.brand-story img,\n.brand-roots img {\n  width: 100%;\n  height: auto;\n  display: block;\n}\n\n/* Rootsは左右反転のレイアウト */\n.brand-roots {\n  flex-direction: row-reverse;\n}\n\n/* 見出し・テキスト */\n.brand-block h2 {\n  font-size: 2rem;\n  margin-bottom: 20px;\n}\n\n.brand-block .lead {\n  font-weight: bold;\n  margin-bottom: 15px;\n}\n\n/* スマホ対応 */\n@media (max-width: 768px) {\n  .brand-story,\n  .brand-roots {\n    flex-direction: column;\n  }\n  .brand-roots {\n    flex-direction: column;\n  }\n}\n</style>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "multirow_Ny4i3K": {
       "type": "multirow",
       "blocks": {
@@ -368,7 +358,6 @@
   "order": [
     "slideshow_czRRk6",
     "rich_text_QL4RJF",
-    "custom_liquid_ECe9J7",
     "multirow_Ny4i3K",
     "image_banner",
     "featured_collection",
