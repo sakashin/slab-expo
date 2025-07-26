@@ -41,12 +41,12 @@
                   color: {{ block.settings.heading_color }};
                   font-weight: {{ block.settings.heading_fontweight }};
                   line-height: {{ block.settings.heading_lineheight_mobile }};
-                  letter-spacing: {{ block.settings.heading_letterspacing_heading_letterspacing_mobile }};
+                  letter-spacing: {{ block.settings.heading_letterspacing_heading_letterspacing_mobile }}rem;
                 }
                 @media screen and (min-width: 750px) {
                   .h2-{{ block.id }} {
                     line-height: {{ block.settings.heading_lineheight_desktop }};
-                    letter-spacing: {{ block.settings.heading_letterspacing_heading_letterspacing_desktop }};
+                    letter-spacing: {{ block.settings.heading_letterspacing_heading_letterspacing_desktop }}rem;
                   }
                 }
               {%- if block.settings.heading_size_type == 'num' -%}
@@ -313,7 +313,7 @@
           "min": 0,
           "max": 2,
           "step": 0.1,
-          "unit": "em",
+          "unit": "rem",
           "label": "文字間（デスクトップ）",
           "default": 0.2
         },
@@ -344,7 +344,7 @@
           "min": 0,
           "max": 2,
           "step": 0.1,
-          "unit": "em",
+          "unit": "rem",
           "label": "文字間（モバイル）",
           "default": 0.2
         },
