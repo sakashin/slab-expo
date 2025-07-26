@@ -58,7 +58,7 @@
             "heading_color": "#7e612e",
             "heading_fontweight": 100,
             "heading_size": "h2",
-            "heading_size_desktop": 24,
+            "heading_size_desktop": 22,
             "heading_lineheight_desktop": 2,
             "heading_letterspacing_desktop": 0.5,
             "heading_size_mobile": 14,
@@ -69,14 +69,14 @@
         "text_ULfyLB": {
           "type": "text",
           "settings": {
-            "text": "<p>海のいのちが織りなす移りゆく美しい自然のグラデーションを放つ椅子。<br>\nそこに腰をかけ、あえて“止まる”時間。<br>\n目の前にある景色を見て今を味わうことで未来に想いを馳せ、自分を感じることで、ひとを想う。<br>\nすべての巡りの“あいだ”にある自分にふと気づく心の余白や感性が呼び覚まされます。</p>\n\n<p>光の角度で表情を変える美しいグラデーションと歳月を重ねることで色彩が移ろう愉しみ。<br>\n日本の美意識を象徴するようなひとときの味わいが人の感性を呼び覚まし、<br>\n自然・時・心を巡らせ未来につなぐ。</p>\n\n<p>伝統的な日本の美意識と先進テクノロジーの融合によって<br>\n生まれた巡りの産物としてのアートピースです。</p>",
+            "text": "<p>海のいのちが織りなす移りゆく<br class=\"br-sp\">美しい自然のグラデーションを放つ椅子。<br>\nそこに腰をかけ、あえて“止まる”時間。<br>\n目の前にある景色を見て今を味わうことで<br class=\"br-sp\">未来に想いを馳せ、自分を感じることで、ひとを想う。<br>\nすべての巡りの“あいだ”にある自分に<br class=\"br-sp\">ふと気づく心の余白や感性が呼び覚まされます。</p>\n\n<p>光の角度で表情を変える美しいグラデーションと<br class=\"br-sp\">歳月を重ねることで色彩が移ろう愉しみ。<br>\n日本の美意識を象徴するようなひとときの味わいが<br class=\"br-sp\">人の感性を呼び覚まし、<br>\n自然・時・心を巡らせ未来につなぐ。</p>\n\n<p>伝統的な日本の美意識と先進テクノロジーの<br class=\"br-sp\">融合によって\n生まれた<br>巡りの産物としてのアートピースです。</p>",
             "text_color": "#7e612e",
             "text_fontweight": 100,
-            "text_size_desktop": 14,
+            "text_size_desktop": 13,
             "text_lineheight_desktop": 2.4,
             "text_letterspacing_desktop": 0.2,
-            "text_size_mobile": 14,
-            "text_lineheight_mobile": 1.3,
+            "text_size_mobile": 11,
+            "text_lineheight_mobile": 2.2,
             "text_letterspacing_mobile": 0.2
           }
         },
