@@ -290,6 +290,11 @@
                 </quantity-popover>
               {% endif %}
             {%- endif -%}
+            {%- if show_summary and card_product.metafields.custom.summary !=  blank -%}
+              <div class="summary">
+              {{ card_product.metafields.custom.summary }}
+              </div>
+            {%- endif -%}
           </div>
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
