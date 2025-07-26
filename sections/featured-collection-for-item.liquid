@@ -91,7 +91,7 @@
               letter-spacing: {{ section.settings.heading_letterspacing_desktop }}rem;
             }
           }
-          {%- if block.settings.heading_size_type == 'num' -%}
+          {%- if section.settings.heading_size_type == 'num' -%}
             #collection-{{ section.id }} .collection__title .title {
               font-size: {{ section.settings.heading_size_mobile }}px;
             }
