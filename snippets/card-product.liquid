@@ -293,8 +293,13 @@
                 </quantity-popover>
               {% endif %}
             {%- endif -%}
+            {%- if show_net_price and card_product.metafields.custom.net_price !=  blank -%}
+              <div class="net_price">
+              {{ card_product.metafields.custom.net_price }}
+              </div>
+            {%- endif -%}
             {%- if show_summary and card_product.metafields.custom.summery !=  blank -%}
-              <div class="summary">
+              <div class="summery">
               {{ card_product.metafields.custom.summery }}
               </div>
             {%- endif -%}
