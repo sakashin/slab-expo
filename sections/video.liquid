@@ -49,7 +49,7 @@
         <div class="title-wrapper title-wrapper--no-top-margin{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           <h2 class="title inline-richtext {{ section.settings.heading_size }}">{{ section.settings.heading }}</h2>
           <style>
-            #video-{{ section.id }} .collection__title .title {
+            #video-{{ section.id }} .title-wrapper .title {
               padding-top: {{ section.settings.heading_padding_top | times: 0.75 | round: 0 }}px;
               padding-bottom: {{ section.settings.heading_padding_bottom | times: 0.75 | round: 0 }}px;
               margin-bottom: 0;
@@ -61,7 +61,7 @@
               width: 100%;
             }
             @media screen and (min-width: 750px) {
-              #video-{{ section.id }} .collection__title .title {
+              #video-{{ section.id }} .title-wrapper .title {
                 padding-top: {{ section.settings.heading_padding_top }}px;
                 padding-bottom: {{ section.settings.heading_padding_bottom }}px;
                 line-height: {{ section.settings.heading_lineheight_desktop }};
@@ -69,11 +69,11 @@
               }
             }
             {%- if section.settings.heading_size_type == 'num' -%}
-              #video-{{ section.id }} .collection__title .title {
+              #video-{{ section.id }} .title-wrapper .title {
                 font-size: {{ section.settings.heading_size_mobile }}px;
               }
               @media screen and (min-width: 750px) {
-                #video-{{ section.id }} .collection__title .title {
+                #video-{{ section.id }} .title-wrapper .title {
                   font-size: {{ section.settings.heading_size_desktop }}px;
                 }
               }
