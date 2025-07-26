@@ -296,6 +296,9 @@
       }
     </script>
     <style>
+      .gradient {
+        background: none;
+      }
       main {
         {% unless settings.background_image == blank %}
           background-image: url('{{ settings.background_image | image_url: width: 1375 }}');
