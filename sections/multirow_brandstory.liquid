@@ -465,6 +465,14 @@
             <div class="swiper-scrollbar"></div>
           </div>
           <script>
+            const swiper = new Swiper('.swiper', {
+              // Optional parameters
+              direction: 'vertical',
+              loop: true,
+              scrollbar: {
+                el: '.swiper-scrollbar',
+              },
+            });
           </script>
         
       {%- endcase -%}
