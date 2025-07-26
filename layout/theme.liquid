@@ -248,7 +248,7 @@
         font-weight: var(--font-body-weight);
       }
 
-      .isolate {
+      main {
         {% unless settings.background_image == blank %}
           background-image: url('{{ settings.background_image | image_url: width: 1375 }}');
           background-repeat: repeat;
