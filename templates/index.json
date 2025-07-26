@@ -53,15 +53,15 @@
         "heading_mVRqHK": {
           "type": "heading",
           "settings": {
-            "heading": "<p>あえて“止まる”時間。<br/>今を味わうことで未来に想いを馳せ、<br/>自分を感じることで、ひとを想う。</p><p>2025年日本国際博覧会（大阪・関西万博）<br/>日本館から生まれた未来をみる椅子</p><p>蓮/REN</p>",
+            "heading": "<p>\nあえて“止まる”時間。<br>\n今を味わうことで未来に想いを馳せ、<br>\n自分を感じることで、ひとを想う。\n</p>\n<p>2025年日本国際博覧会（大阪・関西万博）<br>\n日本館から生まれた未来をみる椅子</p>\n<p>蓮/REN</p>",
             "heading_size_type": "num",
             "heading_color": "#7e612e",
             "heading_fontweight": 100,
             "heading_size": "h2",
             "heading_size_desktop": 24,
             "heading_lineheight_desktop": 2,
-            "heading_letterspacing_desktop": 0.6,
-            "heading_size_mobile": 16,
+            "heading_letterspacing_desktop": 0.5,
+            "heading_size_mobile": 15,
             "heading_lineheight_mobile": 1.3,
             "heading_letterspacing_mobile": 0.2
           }
