@@ -111,6 +111,24 @@
     "multirow_Ny4i3K": {
       "type": "multirow",
       "blocks": {
+        "heading_Gg7pEg": {
+          "type": "heading",
+          "settings": {
+            "heading": "ブランドについて説明する",
+            "heading_size_type": "preset",
+            "heading_color": "#000000",
+            "heading_fontweight": 100,
+            "heading_size": "h1",
+            "heading_size_desktop": 24,
+            "heading_lineheight_desktop": 1.6,
+            "heading_letterspacing_desktop": 0.2,
+            "heading_size_mobile": 20,
+            "heading_lineheight_mobile": 1.3,
+            "heading_letterspacing_mobile": 0.2,
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
+        },
         "row_r7NmcE": {
           "type": "row",
           "settings": {
@@ -133,6 +151,7 @@
         }
       },
       "block_order": [
+        "heading_Gg7pEg",
         "row_r7NmcE",
         "row_y3hwFL"
       ],
