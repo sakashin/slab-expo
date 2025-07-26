@@ -5,7 +5,9 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     {% unless section.settings.background_image == blank %}
-      background-image: url('{{ section.settings.background_image | image_url: width: 1375 }}');
+      background-image: url('{{ section.settings.background_image | image_url: width: 1375, height: 1830 }}');
+      background-repeat: repeat;
+      background-position: 0 0;
       background-size: cover;
       background-position: center;
       background-attachment: scroll !important;
