@@ -154,7 +154,7 @@
                         line-height: {{ block.settings.heading_lineheight_mobile }};
                         letter-spacing: {{ block.settings.heading_letterspacing_mobile }}rem;
                         font-size: {{ block.settings.heading_size_mobile }}px;
-                        border-bottom: 1px solid {{ block.settings.heading_color }};
+                        border-bottom: 1px solid {{ block.settings.heading_border_color }};
                         width: 100%;
                       }
                       @media screen and (min-width: 750px) {
@@ -476,10 +476,10 @@
           "default": "#000000"
         },
         {
-          "type": "color_background",
-          "id": "heading_border_color",
           "label": "見出し下線カラー",
-          "default": "#000000"
+          "id": "heading_border_color",
+          "type": "color_background",
+          "default": "rgba(0,0,0,0.3)"
         },
         {
           "type": "range",
