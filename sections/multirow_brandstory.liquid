@@ -214,7 +214,7 @@
                     </h2>
                     <style>
                       .heading-{{ block.id }} {
-                        margin:0;
+                        margin-block:0;
                         padding-top: {{ block.settings.heading_padding_top | times: 0.75 | round: 0 }}px;
                         padding-bottom: {{ block.settings.heading_padding_bottom | times: 0.75 | round: 0 }}px;
                         color: {{ block.settings.heading_color }};
@@ -240,7 +240,7 @@
                     <div class="text-{{ block.id }} image-with-text__text rte {{ section.settings.text_style }}">{{ block.settings.text }}</div>
                     <style>
                       .text-{{ block.id }} {
-                        margin:0;
+                        margin-block:0;
                         padding-top: {{ block.settings.text_padding_top | times: 0.75 | round: 0 }}px;
                         padding-bottom: {{ block.settings.text_padding_bottom | times: 0.75 | round: 0 }}px;
                         color: {{ block.settings.text_color }};
