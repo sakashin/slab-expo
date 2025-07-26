@@ -284,6 +284,8 @@
             "text_letterspacing_mobile": 0.2,
             "text_padding_top": 40,
             "text_padding_bottom": 52,
+            "image_1": "shopify://shop_images/brand_story_01.jpg",
+            "image_1_sp": "shopify://shop_images/brand_story_01_sp.jpg",
             "heading_1": "行",
             "padding_top": 0,
             "padding_bottom": 0
