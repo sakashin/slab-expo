@@ -114,6 +114,8 @@
         "heading_daHcNW": {
           "type": "heading",
           "settings": {
+            "padding_top": 0,
+            "padding_bottom": 0,
             "heading": "Brand Story",
             "heading_size_type": "num",
             "heading_color": "rgba(255,255,255,1)",
@@ -226,6 +228,8 @@
         "heading_wgTETd": {
           "type": "heading",
           "settings": {
+            "padding_top": 60,
+            "padding_bottom": 40,
             "heading": "Product",
             "heading_size_type": "num",
             "heading_color": "rgba(255,255,255,1)",
