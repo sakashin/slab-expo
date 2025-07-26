@@ -612,7 +612,12 @@
   box-sizing: border-box;
   text-align: left; /* 左寄せに修正 */
   user-select: none;
-  padding: 0 50px;
+  padding: 0 10px;
+}
+@media screen and (min-width: 750px) {
+  .products-{{ block.id }} .carousel-area .content {
+    padding: 0 50px;
+  }
 }
 
 /* カルーセル画像のリセット */
