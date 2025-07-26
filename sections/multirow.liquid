@@ -74,6 +74,7 @@
           </h2>
           <style>
             .h2-{{ block.id }} {
+              text-align: {{ block.settings.heading_align }};
               padding-top: {{ block.settings.padding_top | times: 0.75 | round: 0 }}px;
               padding-bottom: {{ block.settings.padding_bottom | times: 0.75 | round: 0 }}px;
               color: {{ block.settings.heading_color }};
@@ -502,6 +503,26 @@
           "step": 100,
           "label": "太さ",
           "default": 100
+        },
+        {
+          "type": "select",
+          "id": "heading_align",
+          "options": [
+            {
+              "value": "left",
+              "label": "左寄せ"
+            },
+            {
+              "value": "center",
+              "label": "中央"
+            },
+            {
+              "value": "right",
+              "label": "右寄せ"
+            },
+          ],
+          "default": "left",
+          "label": "表示位置"
         },
         {
           "type": "select",

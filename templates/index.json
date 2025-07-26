@@ -114,9 +114,9 @@
         "heading_Gg7pEg": {
           "type": "heading",
           "settings": {
-            "heading": "ブランドについて説明する",
-            "heading_size_type": "preset",
-            "heading_color": "#000000",
+            "heading": "Brand Story",
+            "heading_size_type": "num",
+            "heading_color": "#ffffff",
             "heading_fontweight": 100,
             "heading_size": "h1",
             "heading_size_desktop": 24,
