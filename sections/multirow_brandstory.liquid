@@ -442,11 +442,6 @@
             }
           </style>
         {%- when 'products' -%}
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-          />
-          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
           <div 
             class="products-{{ block.id }} swiper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
@@ -458,6 +453,122 @@
             
             
           </div>
+
+    
+
+<div class="carousel-area">
+    <div class="content">
+        <div class="image">
+            <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
+        </div>
+        <h3 class="heading">蓮/REN</h3>
+        <div class="text">
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        </div>  
+    </div>
+    <div class="content">
+        <div class="image">
+            <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
+        </div>
+        <h3 class="heading">蓮/REN</h3>
+        <div class="text">
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        </div>  
+    </div>
+    <div class="content">
+        <div class="image">
+            <img src="https://www.ren-eco.com/wp-content/uploads/2023/10/ren-eco-1.png" alt="蓮/REN" />
+        </div>
+        <h3 class="heading">蓮/REN</h3>
+        <div class="text">
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+            <p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+        </div>  
+    </div>
+</div>
+<div class="carousel-pagination">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+</div>
+<style>
+.carousel-area {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-area .content {
+  min-width: 100%; /* 1スライドを100%幅に */
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.carousel-area .image img {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-pagination {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-pagination span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-pagination span.active {
+  background: #333;
+}
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel-area");
+  const slides = document.querySelectorAll(".carousel-area .content");
+  const dots = document.querySelectorAll(".carousel-pagination span");
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function updateCarousel(index) {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+
+  // ドットをクリックしたら移動
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel(currentIndex);
+    });
+  });
+
+  // 自動スライド（3秒ごと）
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel(currentIndex);
+  }, 3000);
+
+  updateCarousel(currentIndex); // 初期表示
+});
+</script>
+
         
       {%- endcase -%}
     {%- endfor -%}
