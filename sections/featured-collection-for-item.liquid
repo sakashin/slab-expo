@@ -400,6 +400,17 @@
     },
     {
       "type": "range",
+      "id": "heading_size_mobile",
+      "min": 8,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "フォントサイズ（モバイル）",
+      "default": 24,
+      "visible_if": "{{ section.settings.heading_size_type == 'num' }}"
+    },
+    {
+      "type": "range",
       "id": "heading_lineheight_mobile",
       "min": 1,
       "max": 5,
