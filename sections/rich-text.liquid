@@ -96,14 +96,15 @@
                 .text-{{ block.id }} {
                   color: {{ block.settings.text_color }};
                   font-weight: {{ block.settings.text_fontweight }};
+                  font-size: {{ block.settings.text_size_mobile }}px;
                   line-height: {{ block.settings.text_lineheight_mobile }};
                   letter-spacing: {{ block.settings.text_letterspacing_mobile }}rem;
                 }
                 @media screen and (min-width: 750px) {
                   .text-{{ block.id }} {
+                    font-size: {{ block.settings.text_size_desktop }}px;
                     line-height: {{ block.settings.text_lineheight_desktop }};
                     letter-spacing: {{ block.settings.text_letterspacing_desktop }}rem;
-                    font-size: {{ block.settings.text_size_mobile }}px;
                   }
                 }
               </style>
