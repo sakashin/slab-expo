@@ -651,16 +651,21 @@
   gap: 0;             /* 棒同士の余白を消す */
 }
 
-.products-{{ block.id }} .carousel-pagination span {
-  display: inline-block;
-  width: 60px; /* 棒の長さ */
-  height: 5px;  /* 棒の太さ */
-  background: rgba(255, 255, 255, 0.4); /* 非アクティブは薄い色 */
+.carousel-pagination span {
+  flex: 1;             /* 均等割り */
+  height: 6px;         /* 棒の高さ */
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 0;    /* 丸みを無くすならここを0に */
+  margin: 0;           /* 余白を消す */
   transition: background 0.3s ease;
 }
 
-.products-{{ block.id }} .carousel-pagination span.active {
-  background: rgba(255, 255, 255, 1); /* アクティブは白 */
+.carousel-pagination span + span {
+  margin-left: 2px;    /* 仕切りのように少し余白を入れたい場合 */
+}
+
+.carousel-pagination span.active {
+  background: rgba(255, 255, 255, 1);
 }
 
 </style>
