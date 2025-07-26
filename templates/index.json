@@ -108,6 +108,51 @@
         "background_image": "shopify://shop_images/bg_01.png"
       }
     },
+    "multirow_Ny4i3K": {
+      "type": "multirow",
+      "blocks": {
+        "row_r7NmcE": {
+          "type": "row",
+          "settings": {
+            "caption": "キャプション",
+            "heading": "行",
+            "text": "<p>選択した商品、コレクション、ブログ記事に注目を集めるため、テキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。</p>",
+            "button_label": "ボタンのラベル",
+            "button_link": ""
+          }
+        },
+        "row_y3hwFL": {
+          "type": "row",
+          "settings": {
+            "caption": "キャプション",
+            "heading": "行",
+            "text": "<p>選択した商品、コレクション、ブログ記事に注目を集めるため、テキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。</p>",
+            "button_label": "ボタンのラベル",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_r7NmcE",
+        "row_y3hwFL"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "large",
+        "image_layout": "alternate-left",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -311,6 +356,7 @@
   "order": [
     "slideshow_czRRk6",
     "rich_text_QL4RJF",
+    "multirow_Ny4i3K",
     "image_banner",
     "featured_collection",
     "featured_collection_gA6T3g",
