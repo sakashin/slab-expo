@@ -703,7 +703,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ドットクリック対応
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
-      currentIndex = i + 1;
+      currentIndex = i;
       moveToSlide(currentIndex);
     });
   });
