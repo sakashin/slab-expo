@@ -243,7 +243,8 @@
         }
       ],
       "default": "h1",
-      "label": "t:sections.all.heading_size.label"
+      "label": "t:sections.all.heading_size.label",
+      "visible_if": "{{ section.settings.heading_size_type == 'preset' }}"
     },
     {
       "type": "checkbox",
