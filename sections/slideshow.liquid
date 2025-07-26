@@ -2,21 +2,22 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
+<style>
+  picture {
+    display: block;
+    width: 100%;
+    overflow: hidden; /* はみ出し防止 */
+  }
+  
+  picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* はみ出す分をトリミング */
+  }
+</style>
 {%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
   {%- style -%}
-    picture {
-      display: block;
-      width: 100%;
-      overflow: hidden; /* はみ出し防止 */
-    }
-    
-    picture img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover; /* はみ出す分をトリミング */
-    }
-    
     @media screen and (max-width: 749px) {
       #Slider-{{ section.id }}::before,
       #Slider-{{ section.id }} .media::before,
