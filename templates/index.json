@@ -331,6 +331,7 @@
       "type": "featured-collection-for-item",
       "name": "特集コレクション - Item",
       "settings": {
+        "section_id": "item",
         "collection": "products",
         "products_to_show": 4,
         "title": "Item",
