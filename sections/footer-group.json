@@ -15,7 +15,7 @@
       "type": "custom-liquid",
       "name": "フッタースタイル",
       "settings": {
-        "custom_liquid": "<style>\n    @media screen and (min-width: 750px) {\n        .footer__content-top {\n            padding-bottom: 1rem !important;\n        }\n        .footer-block__details-content .list-menu__item--link {\n            color: #8B6B3F !important;\n            padding: 0 !important;\n            line-height: 1 !important;\n        }\n        .footer-block__details-content li {\n            display: inline-block !important;\n            border-right: 1px solid #c1b7a8;\n            width: 25%;\n            line-height: 1 !important;\n        }\n        .footer-block__details-content>li:first-child {\n            border-left: 1px solid #c1b7a8;\n        }\n        .footer-block__details-content>li:not(:last-child) {\n            margin-right: 0 !important;\n        }\n        .footer__content-bottom {\n            padding-top: 0 !important;\n        }\n        .footer__copyright {\n            margin-top: 0 !important\n        }\n    }\n</style>",
+        "custom_liquid": "<style>\n    @media screen and (min-width: 750px) {\n        .footer__content-top {\n            padding-bottom: 1rem !important;\n        }\n        .footer-block__details-content .list-menu__item--link {\n            color: #8B6B3F !important;\n            padding: 0 !important;\n            line-height: 1 !important;\n        }\n        .footer-block__details-content li {\n            display: inline-block !important;\n            border-right: 1px solid #c1b7a8;\n            width: 25%;\n            line-height: 1 !important;\n        }\n        .footer-block__details-content>li:first-child {\n            border-left: 1px solid #c1b7a8;\n        }\n        .footer-block__details-content>li:not(:last-child) {\n            margin-right: 0 !important;\n        }\n        .footer__content-bottom {\n            padding-top: 0 !important;\n        }\n        .footer__copyright {\n            color: #8B6B3F !important;\n        }\n    }\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
@@ -47,7 +47,7 @@
         "show_policy": false,
         "margin_top": 0,
         "padding_top": 12,
-        "padding_bottom": 68,
+        "padding_bottom": 52,
         "background_image": "shopify://shop_images/bg_pc_01.jpg"
       }
     }
