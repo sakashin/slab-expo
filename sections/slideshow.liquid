@@ -172,7 +172,8 @@
               <picture>
                 <source 
                   media="(max-width: 989px)"
-                  srcset="{{ block.settings.image_sp | image_url }}"
+                  srcset="{{ block.settings.image_sp | image_url: width: 740 }}"
+                  sizes="100vw"
                   loading="lazy">
                 {%- if forloop.first %}
                   {{
