@@ -30,7 +30,7 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 990px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -84,7 +84,7 @@
             letter-spacing: {{ section.settings.heading_letterspacing_mobile }}rem;
             width: 100%;
           }
-          @media screen and (min-width: 750px) {
+          @media screen and (min-width: 990px) {
             #collection-{{ section.id }} .collection__title .title {
               padding-top: {{ section.settings.heading_padding_top }}px;
               padding-bottom: {{ section.settings.heading_padding_bottom }}px;
@@ -96,7 +96,7 @@
             #collection-{{ section.id }} .collection__title .title {
               font-size: {{ section.settings.heading_size_mobile }}px;
             }
-            @media screen and (min-width: 750px) {
+            @media screen and (min-width: 990px) {
               #collection-{{ section.id }} .collection__title .title {
                 font-size: {{ section.settings.heading_size_desktop }}px;
               }
@@ -127,7 +127,7 @@
             font-size: {{ section.settings.text_size_mobile }}px;
             width: 100%;
           }
-          @media screen and (min-width: 750px) {
+          @media screen and (min-width: 990px) {
             #collection-{{ section.id }} .collection__description {
               padding-top: {{ section.settings.text_padding_top }}px;
               padding-bottom: {{ section.settings.text_padding_bottom }}px;
