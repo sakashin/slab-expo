@@ -735,7 +735,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const dots = document.querySelectorAll(".carousel-pagination span");
   let slides = Array.from(carousel.children);
 
-  // スタート位置を中央に
   let currentIndex = Math.floor(slides.length / 2);
   let slideWidth;
 
@@ -757,7 +756,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 50);
 
   function moveToSlide(index) {
-    // 範囲制御
     if (index < 0) index = 0;
     if (index > slides.length - 1) index = slides.length - 1;
 
@@ -775,46 +773,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // フリック用
   let startX = 0;
+  let startY = 0;
   let currentX = 0;
+  let currentY = 0;
   let isDragging = false;
+  let isHorizontal = false;
 
   function startDrag(e) {
     isDragging = true;
+    isHorizontal = false;
     startX = e.type.includes("mouse") ? e.pageX : e.touches[0].pageX;
+    startY = e.type.includes("mouse") ? e.pageY : e.touches[0].pageY;
     carousel.style.transition = "none";
   }
 
   function onDrag(e) {
     if (!isDragging) return;
+
     currentX = e.type.includes("mouse") ? e.pageX : e.touches[0].pageX;
-    const delta = currentX - startX;
-    carousel.style.transform = `translateX(${-slideWidth * currentIndex + delta}px)`;
+    currentY = e.type.includes("mouse") ? e.pageY : e.touches[0].pageY;
+
+    const deltaX = currentX - startX;
+    const deltaY = currentY - startY;
+
+    // 横方向の移動が縦より大きい場合のみスワイプとして処理
+    if (!isHorizontal && Math.abs(deltaX) > Math.abs(deltaY)) {
+      isHorizontal = true;
+    }
+
+    if (isHorizontal) {
+      if (e.cancelable) e.preventDefault(); // 縦スクロールをキャンセル
+      carousel.style.transform = `translateX(${-slideWidth * currentIndex + deltaX}px)`;
+    }
   }
 
   function endDrag() {
     if (!isDragging) return;
     isDragging = false;
+
+    if (!isHorizontal) return; // 縦スクロールは無視
+
     const delta = currentX - startX;
 
     if (delta > 50) moveToSlide(currentIndex - 1);
     else if (delta < -50) moveToSlide(currentIndex + 1);
-    else moveToSlide(currentIndex); // 戻す
+    else moveToSlide(currentIndex);
   }
 
-  // ドットクリック
   dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      moveToSlide(i);
-    });
+    dot.addEventListener("click", () => moveToSlide(i));
   });
 
-  // イベント登録
   window.addEventListener("resize", () => {
     setPosition();
     setPaginationWidth();
   });
-  carousel.addEventListener("touchstart", startDrag);
-  carousel.addEventListener("touchmove", onDrag);
+
+  // イベント登録
+  carousel.addEventListener("touchstart", startDrag, { passive: true });
+  carousel.addEventListener("touchmove", onDrag, { passive: false }); // preventDefaultのためfalse
   carousel.addEventListener("touchend", endDrag);
   carousel.addEventListener("mousedown", startDrag);
   carousel.addEventListener("mousemove", onDrag);
@@ -833,6 +850,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+
 
 
 
