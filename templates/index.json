@@ -420,6 +420,69 @@
         "padding_top": 0,
         "padding_bottom": 36
       }
+    },
+    "collapsible_content_for_faq_9M7nrx": {
+      "type": "collapsible-content-for-faq",
+      "blocks": {
+        "collapsible_row_7tbcCH": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "折りたたみ可能な行",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_4djYWg": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "折りたたみ可能な行",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_TW6MLq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "折りたたみ可能な行",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_dP9iUK": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "折りたたみ可能な行",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_7tbcCH",
+        "collapsible_row_4djYWg",
+        "collapsible_row_TW6MLq",
+        "collapsible_row_dP9iUK"
+      ],
+      "name": "折りたたみ可能なコンテンツ：FAQ",
+      "settings": {
+        "caption": "",
+        "heading": "折りたたみ可能なコンテンツ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "",
+        "color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "background_image": "shopify://shop_images/bg_pc-02.jpg"
+      }
     }
   },
   "order": [
@@ -428,6 +491,7 @@
     "multirow_brandstory_JRdMXP",
     "featured_collection_for_item_GUJttF",
     "custom_liquid_iWDFJB",
-    "video_RTwVyW"
+    "video_RTwVyW",
+    "collapsible_content_for_faq_9M7nrx"
   ]
 }
