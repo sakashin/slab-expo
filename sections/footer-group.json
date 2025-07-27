@@ -15,7 +15,7 @@
       "type": "custom-liquid",
       "name": "フッタースタイル",
       "settings": {
-        "custom_liquid": "<style>\n    @media screen and (min-width: 750px) {\n        .footer-block__details-content .list-menu__item--link {\n            color: #8B6B3F !important;\n        }\n        .footer-block__details-content li {\n            display: inline-block !important;\n            width: 25%;\n        }\n        .footer-block__details-content>li:not(:last-child) {\n            margin-right: none !important;\n        }\n    }\n</style>",
+        "custom_liquid": "<style>\n    @media screen and (min-width: 750px) {\n        .footer-block__details-content .list-menu__item--link {\n            color: #8B6B3F !important;\n        }\n        .footer-block__details-content li {\n            display: inline-block !important;\n            width: 25%;\n        }\n        .footer-block__details-content>li:not(:last-child) {\n            margin-right: 0 !important;\n        }\n    }\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
