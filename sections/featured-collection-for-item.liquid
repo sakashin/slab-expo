@@ -298,6 +298,11 @@
     margin-left: 4px;
     margin-right: 12px;
   }
+  @media screen and (max-width: 749px) {
+    #collection-{{ section.id }} .product-grid li:not(:last-child) {
+      border-right: 1px solid #none;
+    }
+  }
 </style>
 
 {% schema %}
