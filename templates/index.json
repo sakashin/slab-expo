@@ -398,7 +398,9 @@
     "video_RTwVyW": {
       "type": "video",
       "custom_css": [
-        ".video-section > div {border-top: 1px solid #c1b7a8;}"
+        ".video-section > div {border-top: 1px solid #c1b7a8;}",
+        ".deferred-media__poster-button {background: transparent; border: 1px solid #fff;}",
+        ".icon-play svg path {color: #FFF;}"
       ],
       "name": "t:sections.video.presets.name",
       "settings": {
