@@ -302,11 +302,8 @@
     slider-component {
       border-bottom: none;
     }
-    #collection-{{ section.id }} .product-grid {
-      row-gap: 16px;
-    }
-    #collection-{{ section.id }} .product-grid {
-    } border-right: none;
+    #collection-{{ section.id }} .product-gridli:not(:last-child) {
+      border-right: none;
     }
     #collection-{{ section.id }} .product-grid .product-card-wrapper {
       margin-left: 0;
