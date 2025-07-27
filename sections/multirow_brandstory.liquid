@@ -81,7 +81,7 @@
   endunless
 -%}
 
-<div class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+<div{% if section.settings.section_id != blank %} id="{{ section.settings.section_id }}"{% endif %} class="multirow section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
   <div class="multirow__inner">
     {%- for block in section.blocks -%}
       {%- case block.type -%}
@@ -849,6 +849,11 @@ document.addEventListener("DOMContentLoaded", () => {
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "セクションID"
+    },
     {
       "type": "header",
       "content": "t:sections.multirow.settings.header.content"
