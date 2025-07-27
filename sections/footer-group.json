@@ -15,7 +15,7 @@
       "type": "custom-liquid",
       "name": "フッタースタイル",
       "settings": {
-        "custom_liquid": "",
+        "custom_liquid": "<style>\n    .footer-block__details-content {\n        color: #8B6B3F;\n    }\n    .footer-block__details-content li {\n        width: 100px;\n    }\n</style>",
         "color_scheme": "",
         "padding_top": 0,
         "padding_bottom": 0
