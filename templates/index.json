@@ -400,7 +400,7 @@
       "custom_css": [
         ".video-section > div {border-top: 1px solid #c1b7a8;}",
         ".deferred-media__poster-button {background: transparent; border: 1px solid #fff;}",
-        ".icon-play svg path {color: #FFF;}"
+        ".deferred-media__poster-button .icon-play path {color: #fff;}"
       ],
       "name": "t:sections.video.presets.name",
       "settings": {
