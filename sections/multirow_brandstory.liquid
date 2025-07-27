@@ -338,6 +338,11 @@
                 padding-left: 0;
               }
             }
+            @media screen and (min-width: 750px) and (max-width: 989px) {
+              .section-{{ section.id }}-padding .image-with-text-{{ block.id }} .image-with-text__grid.image-with-text__grid--reverse
+                flex-flow: row-reverse;
+              }
+            }
           </style>
         {%- when 'image' -%}
           <div 
