@@ -724,7 +724,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const dots = document.querySelectorAll(".carousel-pagination span");
   let slides = Array.from(carousel.children);
 
-  let currentIndex = 0; // クローンがないので0スタート
+  // スタート位置を中央に
+  let currentIndex = Math.floor(slides.length / 2);
   let slideWidth;
 
   function updateSlideWidth() {
@@ -745,7 +746,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 50);
 
   function moveToSlide(index) {
-    // 両端制御（最初/最後を超えないように）
+    // 範囲制御
     if (index < 0) index = 0;
     if (index > slides.length - 1) index = slides.length - 1;
 
@@ -821,6 +822,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 </script>
+
 
 
 
