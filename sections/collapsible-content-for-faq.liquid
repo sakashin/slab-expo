@@ -142,6 +142,22 @@
               </div>
             {%- endfor -%}
           </div>
+          <style>
+            #collapsible-content-{{ section.id }} .accordion {
+              color: {{ section.settings.text_color }};
+              font-weight: {{ section.settings.text_fontweight }};
+              line-height: {{ section.settings.text_lineheight_mobile }};
+              letter-spacing: {{ section.settings.text_letterspacing_mobile }}rem;
+              font-size: {{ section.settings.text_size_mobile }}px;
+            }
+            @media screen and (min-width: 750px) {
+              #collapsible-content-{{ section.id }} .accordion {
+                line-height: {{ section.settings.text_lineheight_desktop }};
+                letter-spacing: {{ section.settings.text_letterspacing_desktop }}rem;
+                font-size: {{ section.settings.text_size_desktop }}px;
+              }
+            }
+          </style>
         </div>
       </div>
     </div>

@@ -428,7 +428,7 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "折りたたみ可能な行",
-            "icon": "check_mark",
+            "icon": "question_mark",
             "row_content": "",
             "page": ""
           }
