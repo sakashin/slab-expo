@@ -150,7 +150,7 @@
           "settings": {
             "image": "shopify://shop_images/brand_story_01.jpg",
             "image_sp": "shopify://shop_images/brand_story_01_sp.jpg",
-            "image_and_text_gap": 5,
+            "image_and_text_gap": 3,
             "caption": "",
             "heading": "Story",
             "heading_color": "rgba(255,255,255,1)",
