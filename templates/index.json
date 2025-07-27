@@ -421,85 +421,14 @@
         "padding_bottom": 36
       }
     },
-    "collapsible_content_for_faq_9M7nrx": {
-      "type": "collapsible-content-for-faq",
-      "blocks": {
-        "collapsible_row_7tbcCH": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "折りたたみ可能な行",
-            "icon": "question_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_4djYWg": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "折りたたみ可能な行",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_TW6MLq": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "折りたたみ可能な行",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_dP9iUK": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "折りたたみ可能な行",
-            "icon": "check_mark",
-            "row_content": "",
-            "page": ""
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_row_7tbcCH",
-        "collapsible_row_4djYWg",
-        "collapsible_row_TW6MLq",
-        "collapsible_row_dP9iUK"
-      ],
-      "name": "折りたたみ可能なコンテンツ：FAQ",
+    "custom_liquid_AyeTjK": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "caption": "",
-        "heading": "よくある質問",
-        "heading_size_type": "num",
-        "heading_color": "#ffffff",
-        "heading_fontweight": 100,
-        "heading_align": "center",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "heading_size_desktop": 24,
-        "heading_lineheight_desktop": 1.6,
-        "heading_letterspacing_desktop": 0.2,
-        "heading_size_mobile": 24,
-        "heading_lineheight_mobile": 1.3,
-        "heading_letterspacing_mobile": 0.2,
-        "heading_padding_top": 40,
-        "heading_padding_bottom": 32,
-        "text_color": "#ffffff",
-        "text_size_desktop": 18,
-        "text_lineheight_desktop": 1.6,
-        "text_letterspacing_desktop": 0.2,
-        "text_size_mobile": 14,
-        "text_lineheight_mobile": 1.3,
-        "text_letterspacing_mobile": 0.2,
-        "layout": "none",
-        "container_color_scheme": "",
+        "custom_liquid": "",
         "color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "padding_top": 40,
+        "padding_bottom": 52,
         "background_image": "shopify://shop_images/bg_pc-02.jpg"
       }
     }
@@ -511,6 +440,6 @@
     "featured_collection_for_item_GUJttF",
     "custom_liquid_iWDFJB",
     "video_RTwVyW",
-    "collapsible_content_for_faq_9M7nrx"
+    "custom_liquid_AyeTjK"
   ]
 }
