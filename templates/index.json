@@ -310,6 +310,7 @@
       ],
       "name": "複数列：Brand Story",
       "settings": {
+        "section_id": "brand-story",
         "image_height": "adapt",
         "desktop_image_width": "small",
         "image_layout": "alternate-right",
