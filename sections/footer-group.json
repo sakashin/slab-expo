@@ -47,7 +47,8 @@
         "show_policy": false,
         "margin_top": 0,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "background_image": "shopify://shop_images/bg_pc_01.jpg"
       }
     }
   },
