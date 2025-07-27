@@ -306,20 +306,14 @@
       margin-left: 0;
       margin-right: 0;
     }
-    #collection-{{ section.id }} .product-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem; /* カード間の縦の余白 */
-    }
-    #collection-{{ section.id }} .product-grid .product-card-wrapper {
-  width: 45%; /* 横幅を半分程度に */
-}
     #collection-{{ section.id }} .product-grid .product-card-wrapper:nth-child(odd) {
-  align-self: flex-start;
-}
+      margin-left: 3rem;
+      margin-right: 0;
+    }
     #collection-{{ section.id }} .product-grid .product-card-wrapper:nth-child(even) {
-  align-self: flex-end;
-}
+      margin-left: 0;
+      margin-right: 3rem;
+    }
   }
 </style>
 
