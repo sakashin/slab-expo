@@ -27,7 +27,7 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
+  <div id="collapsible-content-{{ section.id }}" class="collapsible-content collapsible-{{ section.settings.layout }}-layout isolate{% if section.settings.layout == 'section' %} page-width{% elsif section.settings.layout == 'none' %} content-container content-container--full-width{% endif %}">
     <div class="collapsible-content__wrapper section-{{ section.id }}-padding{% if section.settings.layout == 'section' %} content-container color-{{ section.settings.container_color_scheme }} gradient{% endif %}">
       <div class="{% if section.settings.image == blank %}collapsible-content-wrapper-narrow{% else %}page-width{% endif %}">
         <div
@@ -43,6 +43,37 @@
             <h2 class="collapsible-content__heading inline-richtext {{ section.settings.heading_size }}">
               {{ section.settings.heading }}
             </h2>
+            <style>
+              #collapsible-content-{{ section.id }} .collapsible-content__heading {
+                padding-top: {{ section.settings.heading_padding_top | times: 0.75 | round: 0 }}px;
+                padding-bottom: {{ section.settings.heading_padding_bottom | times: 0.75 | round: 0 }}px;
+                margin-bottom: 0;
+                text-align: {{ section.settings.heading_align }};
+                color: {{ section.settings.heading_color }};
+                font-weight: {{ section.settings.heading_fontweight }};
+                line-height: {{ section.settings.heading_lineheight_mobile }};
+                letter-spacing: {{ section.settings.heading_letterspacing_mobile }}rem;
+                width: 100%;
+              }
+              @media screen and (min-width: 750px) {
+                #collapsible-content-{{ section.id }} .collapsible-content__heading {
+                  padding-top: {{ section.settings.heading_padding_top }}px;
+                  padding-bottom: {{ section.settings.heading_padding_bottom }}px;
+                  line-height: {{ section.settings.heading_lineheight_desktop }};
+                  letter-spacing: {{ section.settings.heading_letterspacing_desktop }}rem;
+                }
+              }
+              {%- if section.settings.heading_size_type == 'num' -%}
+                #collapsible-content-{{ section.id }} .collapsible-content__heading {
+                  font-size: {{ section.settings.heading_size_mobile }}px;
+                }
+                @media screen and (min-width: 750px) {
+                  #collapsible-content-{{ section.id }} .collapsible-content__heading {
+                    font-size: {{ section.settings.heading_size_desktop }}px;
+                  }
+                }
+              {%- endif -%}
+            </style>
           {%- else -%}
             <h2 class="visually-hidden">{{ 'accessibility.collapsible_content_title' | t }}</h2>
           {% endif %}
@@ -139,6 +170,57 @@
     },
     {
       "type": "select",
+      "id": "heading_size_type",
+      "options": [
+        {
+          "value": "preset",
+          "label": "プリセット"
+        },
+        {
+          "value": "num",
+          "label": "数値"
+        },
+      ],
+      "default": "preset",
+      "label": "フォントサイズ指定方法"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "テキストカラー",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "heading_fontweight",
+      "min": 100,
+      "max": 900,
+      "step": 100,
+      "label": "太さ",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "左寄せ"
+        },
+        {
+          "value": "center",
+          "label": "中央"
+        },
+        {
+          "value": "right",
+          "label": "右寄せ"
+        },
+      ],
+      "default": "left",
+      "label": "表示位置"
+    },
+    {
+      "type": "select",
       "id": "heading_size",
       "options": [
         {
@@ -184,6 +266,88 @@
         }
       ],
       "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "min": 8,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "フォントサイズ（デスクトップ）",
+      "default": 24,
+      "visible_if": "{{ section.settings.heading_size_type == 'num' }}"
+    },
+    {
+      "type": "range",
+      "id": "heading_lineheight_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "px",
+      "label": "行間（デスクトップ）",
+      "default": 1.6
+    },
+    {
+      "type": "range",
+      "id": "heading_letterspacing_desktop",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "unit": "rem",
+      "label": "文字間（デスクトップ）",
+      "default": 0.2
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "min": 8,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "フォントサイズ（モバイル）",
+      "default": 24,
+      "visible_if": "{{ section.settings.heading_size_type == 'num' }}"
+    },
+    {
+      "type": "range",
+      "id": "heading_lineheight_mobile",
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "unit": "px",
+      "label": "行間（モバイル）",
+      "default": 1.3
+    },
+    {
+      "type": "range",
+      "id": "heading_letterspacing_mobile",
+      "min": 0,
+      "max": 2,
+      "step": 0.1,
+      "unit": "rem",
+      "label": "文字間（モバイル）",
+      "default": 0.2
+    },
+    {
+      "type": "range",
+      "id": "heading_padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "heading_padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 52
     },
     {
       "type": "header",
