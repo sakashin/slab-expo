@@ -13,6 +13,13 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    {% unless section.settings.background_image_sp == blank %}
+      background-image: url('{{ section.settings.background_image_sp | image_url: width: 781 }}');
+      background-size: 781px 498px;
+    {% else %}
+      background-image: url('{{ section.settings.background_image | image_url: width: 1365 }}');
+      background-size: 1365px 498px;
+    {% endunless %}
   }
 
   @media screen and (min-width: 750px) {
@@ -23,6 +30,10 @@
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+      {% unless section.settings.background_image == blank %}
+        background-image: url('{{ section.settings.background_image | image_url: width: 1365 }}');
+        background-size: 1365px 498px;
+      {% endunless %}
     }
   }
 {%- endstyle -%}
@@ -529,6 +540,16 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "背景画像"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_sp",
+      "label": "背景画像（モバイル）"
     }
   ],
   "default": {
