@@ -1,0 +1,48 @@
+{% comment %}
+  Snippet: custom-image.liquid
+  Params:
+    - filename: 'example.jpg'
+    - image_class: 'product__image'
+    - wrapper_class: 'product__media media media--transparent'
+    - width: 1946
+    - size_small: '100vw'
+    - size_large: '50vw'
+    - aspect_ratio: '16/9' や '1/1' など任意（オプション）
+    - object_fit: 'cover' | 'contain' | 'fill' など任意（オプション）
+{% endcomment %}
+
+{% assign widths = '246, 493, 600, 713, 823, 990, 1100, 1206, 1346, 1426, 1646, 1946' %}
+{% assign sizes_attr = '(min-width: 768px) ' | append: size_large | append: ', ' | append: size_small %}
+{% assign style_attr = '' %}
+{% if aspect_ratio %}
+  {% assign style_attr = style_attr | append: 'aspect-ratio: ' | append: aspect_ratio | append: ';' %}
+{% endif %}
+{% if object_fit %}
+  {% assign style_attr = style_attr | append: 'object-fit: ' | append: object_fit | append: ';' %}
+{% endif %}
+
+<div class="{{ wrapper_class }} {{ position_class }}">
+  <img
+    src="{{ filename | file_img_url: width }}"
+    width="{{ width }}"
+    class="{{ image_class }}"
+    loading="lazy"
+    sizes="{{ sizes_attr }}"
+    style="{{ style_attr }}"
+    srcset="
+      {{ filename | file_img_url: '246x' }} 246w,
+      {{ filename | file_img_url: '493x' }} 493w,
+      {{ filename | file_img_url: '600x' }} 600w,
+      {{ filename | file_img_url: '713x' }} 713w,
+      {{ filename | file_img_url: '823x' }} 823w,
+      {{ filename | file_img_url: '990x' }} 990w,
+      {{ filename | file_img_url: '1100x' }} 1100w,
+      {{ filename | file_img_url: '1206x' }} 1206w,
+      {{ filename | file_img_url: '1346x' }} 1346w,
+      {{ filename | file_img_url: '1426x' }} 1426w,
+      {{ filename | file_img_url: '1646x' }} 1646w,
+      {{ filename | file_img_url: '1946x' }} 1946w
+    "
+    {% unless alt == blank %}alt="{{ alt }}"{% endunless %}
+  >
+</div>
