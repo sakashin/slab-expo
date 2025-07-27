@@ -624,6 +624,36 @@
     {% endif %}
   }
 }
+.products-{{ block.id }} .content .image.image-2 {
+  {% if block.settings.image_2_sp != blank %}
+    padding-bottom: {{ 1 | divided_by: block.settings.image_2_sp.aspect_ratio | times: 100 }}%;
+  {% else %}
+    padding-bottom: {{ 1 | divided_by: block.settings.image_2.aspect_ratio | times: 100 }}%;
+  {% endif %}
+}
+/* PC用のアスペクト比指定 */
+@media screen and (min-width: 750px) {
+  .products-{{ block.id }} .content .image.image-2 {
+    {% if block.settings.image_2 != blank %}
+      padding-bottom: {{ 1 | divided_by: block.settings.image_2.aspect_ratio | times: 100 }}%;
+    {% endif %}
+  }
+}
+.products-{{ block.id }} .content .image.image-3 {
+  {% if block.settings.image_3_sp != blank %}
+    padding-bottom: {{ 1 | divided_by: block.settings.image_3_sp.aspect_ratio | times: 100 }}%;
+  {% else %}
+    padding-bottom: {{ 1 | divided_by: block.settings.image_3.aspect_ratio | times: 100 }}%;
+  {% endif %}
+}
+/* PC用のアスペクト比指定 */
+@media screen and (min-width: 750px) {
+  .products-{{ block.id }} .content .image.image-3 {
+    {% if block.settings.image_3 != blank %}
+      padding-bottom: {{ 1 | divided_by: block.settings.image_3.aspect_ratio | times: 100 }}%;
+    {% endif %}
+  }
+}
 
 .products-{{ block.id }} h3.heading {
   padding-top: {{ block.settings.heading_padding_top | times: 0.75 | round: 0 }}px;
