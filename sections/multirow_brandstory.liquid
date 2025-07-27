@@ -505,7 +505,7 @@
               </div>
               <div class="content">
                 {%- if block.settings.image_2 != blank -%}
-                  <div class="image image-1">
+                  <div class="image image-2">
                     {%- capture sizes -%}
                       (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
                       (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
@@ -540,7 +540,7 @@
               </div>
               <div class="content">
                 {%- if block.settings.image_3 != blank -%}
-                  <div class="image image-1">
+                  <div class="image image-3">
                     {%- capture sizes -%}
                       (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
                       (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
@@ -566,11 +566,11 @@
                     {%- endif -%}
                   </div>
                   {%- endif -%}
-                  {%- if block.settings.heading_1 != blank -%}
-                  <h3 class="heading">{{ block.settings.heading_1 }}</h3>
+                  {%- if block.settings.heading_3 != blank -%}
+                  <h3 class="heading">{{ block.settings.heading_3 }}</h3>
                   {%- endif -%}
-                  {%- if block.settings.text_1 != blank -%}
-                  <div class="text">{{ block.settings.text_1 }}</div>
+                  {%- if block.settings.text_3 != blank -%}
+                  <div class="text">{{ block.settings.text_3 }}</div>
                 {%- endif -%}
               </div>
             </div>
