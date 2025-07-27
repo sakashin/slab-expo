@@ -99,6 +99,7 @@
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
+        "section_id": "brand-concept",
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
