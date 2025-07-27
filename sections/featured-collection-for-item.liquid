@@ -59,6 +59,7 @@
 -%}
 
 <div
+  {% if section.settings.section_id != blank %} id="{{ section.settings.section_id }}"{% endif %}
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
   <div
@@ -330,6 +331,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "セクションID"
+    },
     {
       "type": "collection",
       "id": "collection",
