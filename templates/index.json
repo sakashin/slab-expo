@@ -392,6 +392,9 @@
     },
     "video_RTwVyW": {
       "type": "video",
+      "custom_css": [
+        ".video-section > div {border-top: 1px solid #c1b7a8;}"
+      ],
       "name": "t:sections.video.presets.name",
       "settings": {
         "heading": "Movie",
