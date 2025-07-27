@@ -1,1 +1,34 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"padding_top":28,"padding_bottom":28}},"image_with_text_mNFHaa":{"type":"image-with-text","blocks":{"heading_XYGqtV":{"type":"heading","settings":{"heading":"テキスト付き画像","heading_size":"h1"}},"text_qNpEKr":{"type":"text","settings":{"text":"<p>選択した商品、コレクション、ブログ記事に注目を集めるため、テキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。<\/p>","text_style":"body"}},"button_g8PNYz":{"type":"button","settings":{"button_label":"ボタンのラベル","button_link":"","button_style_secondary":false}}},"block_order":["heading_XYGqtV","text_qNpEKr","button_g8PNYz"],"name":"t:sections.image-with-text.presets.name","settings":{"height":"adapt","desktop_image_width":"medium","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"top","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"","color_scheme":"","padding_top":36,"padding_bottom":36}},"multicolumn_fxhCWf":{"type":"multicolumn","blocks":{"column_QibU8k":{"type":"column","settings":{"title":"列","text":"<p>選択した商品、コレクション、ブログ記事に注目を集めるため、テキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。<\/p>","link_label":"","link":""}},"column_j8Kzxh":{"type":"column","settings":{"title":"列","text":"<p>選択した商品、コレクション、ブログ記事に注目を集めるため、テキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。<\/p>","link_label":"","link":""}},"column_JbryKW":{"type":"column","settings":{"title":"列","text":"<p>選択した商品、コレクション、ブログ記事に注目を集めるため、テキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。<\/p>","link_label":"","link":""}}},"block_order":["column_QibU8k","column_j8Kzxh","column_JbryKW"],"name":"t:sections.multicolumn.presets.name","settings":{"title":"マルチカラム","heading_size":"h1","image_width":"full","image_ratio":"adapt","button_label":"ボタンのラベル","button_link":"","columns_desktop":3,"column_alignment":"left","background_style":"primary","color_scheme":"","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"rich_text_RCCB4E":{"type":"rich-text","blocks":{"heading_PBzdar":{"type":"heading","settings":{"heading":"ブランドについて説明する","heading_size":"h1"}},"text_mChEJK":{"type":"text","settings":{"text":"<p>ブランドに関する情報をお客様と共有します。商品を説明したり、告知をしたり、ストアへのお客様を歓迎したりします。<\/p>"}},"button_NEL8KH":{"type":"button","settings":{"button_label":"ボタンのラベル","button_link":"","button_style_secondary":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_PBzdar","text_mChEJK","button_NEL8KH"],"name":"t:sections.rich-text.presets.name","settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}}},"order":["main","rich_text_RCCB4E","image_with_text_mNFHaa","multicolumn_fxhCWf"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_U8QYbi": {
+      "type": "custom-liquid",
+      "name": "会社概要コード",
+      "settings": {
+        "custom_liquid": "<div class=\"company-profile\">\n  <style>\n    .company-profile-table {\n      width: 100%;\n      max-width: 600px;\n      margin: 0 auto;\n      border-collapse: collapse;\n      border-top: 2px solid #ccc;\n      line-height: 1.6;\n    }\n    .company-profile-table th,\n    .company-profile-table td {\n      padding: 1rem;\n      text-align: left;\n      vertical-align: top;\n    }\n    .company-profile-table th {\n      width: 30%;\n      font-weight: normal;\n      color: #333;\n    }\n    .company-profile-table td {\n      width: 70%;\n    }\n    .company-profile-table tr {\n      border-bottom: 1px solid #ccc;\n    }\n    .company-profile-table a {\n      color: inherit;\n      text-decoration: underline;\n    }\n    @media screen and (max-width: 600px) {\n      .company-profile {\n        padding-inline: 24px;\n        width: 100%;\n      }\n      .company-profile-table th,\n      .company-profile-table td {\n        display: block;\n        width: 100%;\n        line-height: 1.2;\n      }\n      .company-profile-table th {\n        padding: 2rem 1rem .5rem 1rem;\n      }\n      .company-profile-table td {\n        padding: .5rem 1rem 2rem 1rem;\n      }\n      \n    }\n  </style>\n  <table class=\"company-profile-table\">\n    <tr>\n      <th>会社名</th>\n      <td>会社名</td>\n    </tr>\n    <tr>\n      <th>住所</th>\n      <td>住所</td>\n    </tr>\n    <tr>\n      <th>代表</th>\n      <td>代表</td>\n    </tr>\n    <tr>\n      <th>事業概要</th>\n      <td>事業概要</td>\n    </tr>\n    <tr>\n      <th>ホームページ</th>\n      <td><a href=\"https://www.yahoo.co.jp/\">https://www.yahoo.co.jp/</a></td>\n    </tr>\n  </table>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_U8QYbi"
+  ]
+}
