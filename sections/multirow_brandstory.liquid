@@ -888,6 +888,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const paginationWidth = rectWidth - paddingLeft - paddingRight;
     document.querySelector(".carousel-pagination").style.width = `${paginationWidth}px`;
   }
+  
+  // スライドのクリックで左右半分を判定して移動
+  carousel.addEventListener("click", (e) => {
+    // 現在のスライドの位置とサイズを取得
+    const slideElement = slides[currentIndex];
+    const rect = slideElement.getBoundingClientRect();
+  
+    // クリック位置がスライドの左半分か右半分かを判定
+    const clickX = e.clientX;
+  
+    if (clickX < rect.left + rect.width / 2) {
+      // 左半分 → 前のスライドへ
+      moveToSlide(currentIndex - 1);
+    } else {
+      // 右半分 → 次のスライドへ
+      moveToSlide(currentIndex + 1);
+    }
+  });
+
 });
 </script>
 
