@@ -1459,6 +1459,16 @@
         "type": "image_picker",
         "id": "background_image",
         "label": "背景画像"
+      },
+      {
+        "type": "text",
+        "id": "background_image_width",
+        "label": "背景画像横サイズ"
+      },
+      {
+        "type": "text",
+        "id": "background_image_height",
+        "label": "背景画像縦サイズ"
       }
     ]
   }
