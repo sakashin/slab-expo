@@ -28,7 +28,7 @@
     endif
   endif
 -%}
-poster:{{ poster }}
+
 {%- capture sizes -%}
   {% if section.settings.full_width -%}
     100vw
@@ -147,7 +147,7 @@ poster:{{ poster }}
               loop: section.settings.enable_video_looping,
               controls: true,
               muted: false,
-              poster: poster
+            poster: poster
           }}
         {%- endif -%}
       </template>
