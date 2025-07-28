@@ -139,7 +139,6 @@
             ></iframe>
           {%- endif -%}
         {%- else -%}
-          {%- assign poster = section.settings.cover_image | image_url: width: 1100 -%}
           {{
             section.settings.video
             | video_tag:
