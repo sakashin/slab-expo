@@ -295,21 +295,25 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    {%- if setings.background_image != blank -%}
+      {%- assign background_image_width = settings.background_image_width | default: 1375 -%}
+      {%- assign background_image_height = settings.background_image_height | default: 780 -%}
     <style>
       .gradient {
         background: none;
       }
       main {
         {% unless settings.background_image == blank %}
-          background-image: url('{{ settings.background_image | image_url: width: 1375 }}');
+          background-image: url('{{ settings.background_image | image_url: width: background_image_width }}');
           background-repeat: repeat;
           background-position: 0 0;
-          background-size: 687px 915px;
+          background-size: {{ background_image_width }}px {{ background_image_height }}px;
           background-position: center;
           background-attachment: scroll !important;
         {% endunless %}
       }
     </style>
+    {%- endif -%}
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
