@@ -32,8 +32,10 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
       {% unless section.settings.background_image == blank %}
-        background-image: url('{{ section.settings.background_image | image_url: width: 1365 }}');
-        background-size: 1365px 498px;
+        {%- assign background_image_width = settings.background_image_width | default: 1375 -%}
+        {%- assign background_image_height = settings.background_image_height | default: 780 -%}
+        background-image: url('{{ section.settings.background_image | image_url: width: background_image_width }}');
+        background-size: {{ background_image_width }}px {{ background_image_height }}px;
       {% endunless %}
     }
     .section-{{ section.id }}-padding .grid--3-col-tablet .grid__item {
