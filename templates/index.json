@@ -454,8 +454,9 @@
         "background_image": "shopify://shop_images/250726_ren_web_bg_pc-02.png",
         "background_image_width": "1365",
         "background_image_height": "498",
-        "background_image_sp_width": "",
-        "background_image_sp_height": ""
+        "background_image_sp": "shopify://shop_images/250726_ren_web_bg_sp-02.png",
+        "background_image_sp_width": "550",
+        "background_image_sp_height": "332"
       }
     }
   },
