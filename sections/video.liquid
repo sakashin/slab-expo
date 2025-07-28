@@ -139,7 +139,7 @@
             ></iframe>
           {%- endif -%}
         {%- else -%}
-          {%- assign poster = section.settings.video.preview_image | image_url: width: 1100 -%}
+          {%- assign poster = section.settings.video.preview_image | image_url: width: 1100 -%}poster:{{ poster }}
           {{
             section.settings.video
             | video_tag:
