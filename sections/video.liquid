@@ -112,7 +112,7 @@
             {{- 'icon-play.svg' | inline_asset_content -}}
           </span>
         </span>
-      </button>
+      </button>{%- assign poster = section.settings.video.preview_image | image_url: width: 1100 -%}poster:{{ poster }}
       <template>
         {%- if section.settings.video == null and section.settings.video_url != null -%}
           {%- liquid
@@ -139,7 +139,6 @@
             ></iframe>
           {%- endif -%}
         {%- else -%}
-          {%- assign poster = section.settings.video.preview_image | image_url: width: 1100 -%}poster:{{ poster }}
           {{
             section.settings.video
             | video_tag:
