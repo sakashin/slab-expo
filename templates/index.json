@@ -236,7 +236,7 @@
           "type": "heading",
           "settings": {
             "padding_top": 60,
-            "padding_bottom": 40,
+            "padding_bottom": 60,
             "heading": "Product",
             "heading_size_type": "num",
             "heading_color": "rgba(255,255,255,1)",
