@@ -232,6 +232,7 @@
         </div>
       </div>
     {%- endfor -%}
+    {{ section.settings.custom_liquid }}
   </div>
 
   {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
@@ -426,6 +427,12 @@
       "label": "t:sections.slideshow.settings.accessibility.label",
       "info": "t:sections.slideshow.settings.accessibility.info",
       "default": "t:sections.slideshow.settings.accessibility.default"
+    },
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:sections.custom-liquid.settings.custom_liquid.label",
+      "info": "t:sections.custom-liquid.settings.custom_liquid.info"
     }
   ],
   "blocks": [
