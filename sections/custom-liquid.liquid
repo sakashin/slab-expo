@@ -3,11 +3,15 @@
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
     padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
     {% unless section.settings.background_image_sp == blank %}
-      background-image: url('{{ section.settings.background_image_sp | image_url: width: 781 }}');
-      background-size: 781px 498px;
+      {%- assign background_image_sp_width = section.settings.background_image_width | default: 780 -%}
+      {%- assign background_image_sp_height = section.settings.background_image_height | default: 498 -%}
+      background-image: url('{{ section.settings.background_image_sp | image_url: width: background_image_sp_width }}');
+      background-size: {{ background_image_sp_width }}px {{ background_image_sp_height }}px;
     {% else %}
-      background-image: url('{{ section.settings.background_image | image_url: width: 1365 }}');
-      background-size: 1365px 498px;
+      {%- assign background_image_width = section.settings.background_image_width | default: 1375 -%}
+      {%- assign background_image_height = section.settings.background_image_height | default: 780 -%}
+      background-image: url('{{ section.settings.background_image | image_url: width: background_image_width }}');
+      background-size: {{ background_image_width }}px {{ background_image_height }}px;
     {% endunless %}
   }
 
@@ -16,8 +20,10 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
       {% unless section.settings.background_image == blank %}
-        background-image: url('{{ section.settings.background_image | image_url: width: 1365 }}');
-        background-size: 1365px 498px;
+        {%- assign background_image_width = section.settings.background_image_width | default: 1375 -%}
+        {%- assign background_image_height = section.settings.background_image_height | default: 780 -%}
+        background-image: url('{{ section.settings.background_image | image_url: width: background_image_width }}');
+        background-size: {{ background_image_width }}px {{ background_image_height }}px;
       {% endunless %}
     }
   }
@@ -76,9 +82,29 @@
       "label": "背景画像"
     },
     {
+      "type": "text",
+      "id": "background_image_width",
+      "label": "背景画像横サイズ"
+    },
+    {
+      "type": "text",
+      "id": "background_image_height",
+      "label": "背景画像縦サイズ"
+    },
+    {
       "type": "image_picker",
       "id": "background_image_sp",
       "label": "背景画像（モバイル）"
+    },
+    {
+      "type": "text",
+      "id": "background_image_sp_width",
+      "label": "背景画像（モバイル）横サイズ"
+    },
+    {
+      "type": "text",
+      "id": "background_image_sp_height",
+      "label": "背景画像（モバイル）縦サイズ"
     }
   ],
   "presets": [
