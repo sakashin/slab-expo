@@ -295,23 +295,35 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-    setings.background_image:{{ settings.background_image }}
-    {%- if setings.background_image != blank -%}
+    {%- if settings.background_image != blank -%}
       {%- assign background_image_width = settings.background_image_width | default: 1375 -%}
       {%- assign background_image_height = settings.background_image_height | default: 780 -%}
+      {%- assign background_image_sp_width = settings.background_image_sp_width | default: 1375 -%}
+      {%- assign background_image_sp_height = settings.background_image_sp_height | default: 780 -%}
     <style>
       .gradient {
         background: none;
       }
-      main {
-        {% unless settings.background_image == blank %}
+      @media screen and (max-width: 989px) {
+        main {
+            background-repeat: repeat;
+            background-position: 0 0;
+            background-position: center;
+            background-attachment: scroll !important;
+          {% unless settings.background_image_sp == blank %}
+            background-image: url('{{ settings.background_image_sp | image_url: width: background_image_sp_width }}');
+            background-size: {{ background_image_sp_width }}px {{ background_image_sp_height }}px;
+          {% else %}
+            background-image: url('{{ settings.background_image | image_url: width: background_image_width }}');
+            background-size: {{ background_image_width }}px {{ background_image_height }}px;
+          {% endunless %}
+        }
+      }
+      @media screen and (min-width: 990px) {
+        main {
           background-image: url('{{ settings.background_image | image_url: width: background_image_width }}');
-          background-repeat: repeat;
-          background-position: 0 0;
           background-size: {{ background_image_width }}px {{ background_image_height }}px;
-          background-position: center;
-          background-attachment: scroll !important;
-        {% endunless %}
+        }
       }
     </style>
     {%- endif -%}
