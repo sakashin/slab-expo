@@ -62,11 +62,11 @@
             "heading_size_desktop": 22,
             "heading_lineheight_desktop": 2,
             "heading_letterspacing_desktop": 0.5,
-            "heading_size_mobile": 14,
-            "heading_lineheight_mobile": 2,
-            "heading_letterspacing_mobile": 0.3,
+            "heading_size_mobile": 16,
+            "heading_lineheight_mobile": 1.8,
+            "heading_letterspacing_mobile": 0.1,
             "padding_top": 0,
-            "padding_bottom": 0
+            "padding_bottom": 20
           }
         },
         "text_ULfyLB": {
@@ -78,9 +78,9 @@
             "text_size_desktop": 13,
             "text_lineheight_desktop": 2.4,
             "text_letterspacing_desktop": 0.2,
-            "text_size_mobile": 11,
+            "text_size_mobile": 13,
             "text_lineheight_mobile": 2.2,
-            "text_letterspacing_mobile": 0.2,
+            "text_letterspacing_mobile": 0.1,
             "padding_top": 0,
             "padding_bottom": 28
           }
@@ -105,7 +105,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 60,
+        "padding_top": 92,
         "padding_bottom": 100,
         "background_image_width": "",
         "background_image_height": "",
