@@ -1469,6 +1469,21 @@
         "type": "text",
         "id": "background_image_height",
         "label": "背景画像縦サイズ"
+      },
+      {
+        "type": "image_picker",
+        "id": "background_image_sp",
+        "label": "背景画像（モバイル）"
+      },
+      {
+        "type": "text",
+        "id": "background_image_sp_width",
+        "label": "背景画像（モバイル）横サイズ"
+      },
+      {
+        "type": "text",
+        "id": "background_image_sp_height",
+        "label": "背景画像（モバイル）縦サイズ"
       }
     ]
   }
