@@ -139,6 +139,7 @@
             ></iframe>
           {%- endif -%}
         {%- else -%}
+          {%- assign poster = section.settings.video.preview_image | image_url: width: 1100 -%}
           {{
             section.settings.video
             | video_tag:
@@ -147,7 +148,7 @@
               loop: section.settings.enable_video_looping,
               controls: true,
               muted: false,
-            poster: poster
+              poster: poster
           }}
         {%- endif -%}
       </template>
