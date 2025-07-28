@@ -106,7 +106,11 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 60,
-        "padding_bottom": 100
+        "padding_bottom": 100,
+        "background_image_width": "",
+        "background_image_height": "",
+        "background_image_sp_width": "",
+        "background_image_sp_height": ""
       }
     },
     "multirow_brandstory_JRdMXP": {
@@ -326,7 +330,11 @@
         "row_color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 60,
-        "background_image": "shopify://shop_images/bg_pc-02.jpg"
+        "background_image": "shopify://shop_images/250726_ren_web_bg_pc-02.png",
+        "background_image_width": "1375",
+        "background_image_height": "780",
+        "background_image_sp_width": "",
+        "background_image_sp_height": ""
       }
     },
     "featured_collection_for_item_GUJttF": {
