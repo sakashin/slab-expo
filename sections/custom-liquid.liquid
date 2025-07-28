@@ -3,9 +3,9 @@
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
     padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
     {% unless section.settings.background_image_sp == blank %}
-      {%- assign background_image_sp_width = section.settings.background_image_width | default: 780 -%}
+      {%- assign background_image_sp_width = section.settings.background_image_sp_width | default: 780 -%}
       {%- assign background_image_sp_width_triple = background_image_sp_width | times: 3 -%}
-      {%- assign background_image_sp_height = section.settings.background_image_height | default: 498 -%}
+      {%- assign background_image_sp_height = section.settings.background_image_sp_height | default: 498 -%}
       background-image: url('{{ section.settings.background_image_sp | image_url: width: background_image_sp_width_triple }}');
       background-size: {{ background_image_sp_width }}px {{ background_image_sp_height }}px;
     {% else %}
