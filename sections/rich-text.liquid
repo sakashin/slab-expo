@@ -5,8 +5,8 @@
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     {% unless section.settings.background_image == blank %}
-      {%- assign background_image_width = settings.background_image_width | default: 1375 -%}
-      {%- assign background_image_height = settings.background_image_height | default: 780 -%}
+      {%- assign background_image_width = section.settings.background_image_width | default: 1375 -%}
+      {%- assign background_image_height = section.settings.background_image_height | default: 780 -%}
       background-image: url('{{ section.settings.background_image | image_url: width: background_image_width }}');
       background-repeat: repeat;
       background-position: 0 0;
