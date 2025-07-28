@@ -129,6 +129,8 @@
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
     "background_image": "shopify://shop_images/250726_ren_web_bg_pc_01.png",
+    "background_image_width": "1365",
+    "background_image_height": "498",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
