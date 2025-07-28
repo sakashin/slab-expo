@@ -10,13 +10,15 @@
     background-attachment: scroll !important;
     {% unless section.settings.background_image_sp == blank %}
       {%- assign background_image_sp_width = section.settings.background_image_width | default: 780 -%}
+      {%- assign background_image_sp_width_triple = background_image_sp_width | times: 3 -%}
       {%- assign background_image_sp_height = section.settings.background_image_height | default: 498 -%}
-      background-image: url('{{ section.settings.background_image_sp | image_url: width: background_image_sp_width }}');
+      background-image: url('{{ section.settings.background_image_sp | image_url: width: background_image_sp_width_triple }}');
       background-size: {{ background_image_sp_width }}px {{ background_image_sp_height }}px;
     {% else %}
       {%- assign background_image_width = section.settings.background_image_width | default: 1375 -%}
+      {%- assign background_image_width_triple = background_image_width | times: 3 -%}
       {%- assign background_image_height = section.settings.background_image_height | default: 780 -%}
-      background-image: url('{{ section.settings.background_image | image_url: width: background_image_width }}');
+      background-image: url('{{ section.settings.background_image | image_url: width: background_image_width_triple }}');
       background-size: {{ background_image_width }}px {{ background_image_height }}px;
     {% endunless %}
   }
