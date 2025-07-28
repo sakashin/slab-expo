@@ -232,7 +232,7 @@
         </div>
       </div>
     {%- endfor -%}
-    {{ section.settings.custom_liquid }}
+    {{ section.settings.custom_liquid | replace: '__section_id__', section.id }}
   </div>
 
   {%- if section.blocks.size > 1 and section.settings.auto_rotate == false -%}
