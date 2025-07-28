@@ -158,7 +158,7 @@
             "image_sp": "shopify://shop_images/250726_ren_web_photo_14.png",
             "image_and_text_gap": 5,
             "caption": "",
-            "heading": "Story",
+            "heading": "",
             "heading_color": "rgba(255,255,255,1)",
             "heading_border_color": "rgba(255,255,255,0.7)",
             "heading_fontweight": 100,
