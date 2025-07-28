@@ -297,8 +297,10 @@
     </script>
     {%- if settings.background_image != blank -%}
       {%- assign background_image_width = settings.background_image_width | default: 1375 -%}
+      {%- assign background_image_height_double = background_image_width | times: 2 -%}
       {%- assign background_image_height = settings.background_image_height | default: 780 -%}
       {%- assign background_image_sp_width = settings.background_image_sp_width | default: 1375 -%}
+      {%- assign background_image_sp_width_double = background_image_sp_width | times: 2 -%}
       {%- assign background_image_sp_height = settings.background_image_sp_height | default: 780 -%}
     <style>
       .gradient {
@@ -311,17 +313,17 @@
             background-position: center;
             background-attachment: scroll !important;
           {% unless settings.background_image_sp == blank %}
-            background-image: url('{{ settings.background_image_sp | image_url: width: background_image_sp_width }}');
+            background-image: url('{{ settings.background_image_sp | image_url: width: background_image_sp_width_double }}');
             background-size: {{ background_image_sp_width }}px {{ background_image_sp_height }}px;
           {% else %}
-            background-image: url('{{ settings.background_image | image_url: width: background_image_width }}');
+            background-image: url('{{ settings.background_image | image_url: width: background_image_height_double }}');
             background-size: {{ background_image_width }}px {{ background_image_height }}px;
           {% endunless %}
         }
       }
       @media screen and (min-width: 990px) {
         main {
-          background-image: url('{{ settings.background_image | image_url: width: background_image_width }}');
+          background-image: url('{{ settings.background_image | image_url: width: background_image_height_double }}');
           background-size: {{ background_image_width }}px {{ background_image_height }}px;
         }
       }
