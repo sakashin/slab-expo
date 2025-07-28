@@ -433,6 +433,7 @@
         "heading_padding_bottom": 12,
         "video": "shopify://files/videos/movie.mp4",
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/250726_ren_web_photo_1.png",
         "description": "",
         "full_width": false,
         "color_scheme": "",
