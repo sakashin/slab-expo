@@ -18,6 +18,7 @@
     },
     "form": {
       "type": "contact-form",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -32,7 +33,7 @@
         "powerful_form_builder_app_block_TyDh3H": {
           "type": "shopify://apps/powerful-form-builder/blocks/app-block/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
           "settings": {
-            "shortcode": ""
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTAxNzQ3\"></div>"
           }
         }
       },
