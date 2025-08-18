@@ -12,5 +12,16 @@
   "context": {
     "market": "jp"
   },
-  "sections": {}
+  "sections": {
+    "17538003474a7c36ce": {
+      "settings": {},
+      "blocks": {
+        "powerful_form_builder_app_block_TkW7nG": {
+          "settings": {
+            "shortcode": "<div class=\"globo-formbuilder\" data-id=\"MTA0NTU3\"></div>"
+          }
+        }
+      }
+    }
+  }
 }
